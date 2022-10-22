@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Numbers</title>
+</head>
+
+
+<style>
+    header {
+        height: clamp(32px, 32px, 10%);
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        height: 100vh;
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        background: #bccad6;
+    }
+
+    footer {
+        height: clamp(32px, 32px, 10%);
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <header>
+        <input id="userInput" type="text">
+    </header>
+
+    <main class="wrapper">
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <input type="button" value="Перевести">
+    </footer>
+</body>
+
+<script>
+    const basic = {
+        "1": "ერთი",
+        "2": "ორი",
+        "3": "სამი",
+        "4": "ოთხი",
+        "5": "ხუთი",
+        "6": "ექვსი",
+        "7": "შვიდი",
+        "8": "რვა",
+        "9": "ცხრა",
+        "10": "ათი",
+        "11": "თერთმეტი",
+        "12": "თორმეტი",
+        "13": "ცამეტი",
+        "14": "თოთხმეტი",
+        "15": "თხუთმეტი",
+        "16": "თექვსმეტი",
+        "17": "ჩვიდმეტი",
+        "18": "თვრამეტი",
+        "19": "ცხრამეტი",
+        "20": "ოცი",
+        "100": "ასი",
+        "1000": "ათასი",
+        "1000000": "მილიონი"
+    }
+
+    const tens = {
+        "40": "ორმოცი",
+        "60": "სამოცი",
+        "80": "ოთხმოცი",
+    }
+
+    const hundreds = {
+        "200": "ორასი",
+        "300": "სამასი",
+        "400": "ოთხასი",
+        "500": "ხუთასი",
+        "600": "ექვსასი",
+        "700": "შვიდასი",
+        "800": "რვაასი",
+        "900": "ცხრაასი",
+    }
+
+    const allNumbers = { ...tens, ...basic, ...hundreds }
+
+    function parseInputNumber(input) {
+        const fromDict = allNumbers[input];
+        if (fromDict) return fromDict;
+        switch (input.length) {
+            case 2:
+                return parseTens(input);
+            case 3:
+                return parseHundreds(input);
+            default:
+                return "";
+        }
+    }
+
+    function parseTens(n) {
+        const num = Number(n);
+        if (num < 20) {
+            return allNumbers[n]
+        }
+        const twenties = Math.floor(num / 20) * 20;
+        const remainder = num - twenties;
+        const twentiesString = allNumbers[String(twenties)];
+        return twentiesString.slice(0, twentiesString.length - 1) + 'და' + allNumbers[String(remainder)]
+    }
+
+    function parseHundreds(n) {
+        const hundreds = allNumbers[Number(n[0]) * 100 + ""];
+        const tens = parseTens(n.slice(1));
+        return hundreds.slice(0, hundreds.length - 1) + " " + tens;
+    }
+    function translate() {
+        const userInp = document.querySelector(`#userInput`)
+        return parseInputNumber(userInp.value)
+    }
+
+    document
+        .querySelector('input[type="button"]')
+        .addEventListener('click', () => {
+            const res = translate()
+            console.log(res);
+            const resultEl = document.querySelector(`#result`)
+            resultEl.textContent = res
+        })
+</script>
+
+</html>
