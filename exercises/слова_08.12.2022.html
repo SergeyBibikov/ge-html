@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>ჭიქა</div>
+            <div>кружка</div>
+        </li>
+
+        <li>
+            <div>კოვზი</div>
+            <div>ложка</div>
+        </li>
+
+        <li>
+            <div>ჩანგალი</div>
+            <div>вилка</div>
+        </li>
+
+        <li>
+            <div>მაცივარი</div>
+            <div>холодильник</div>
+        </li>
+
+        <li>
+            <div>მაგიდა</div>
+            <div>стол</div>
+        </li>
+
+        <li>
+            <div>სკამი</div>
+            <div>стул</div>
+        </li>
+
+        <li>
+            <div>დანა</div>
+            <div>нож</div>
+        </li>
+
+        <li>
+            <div>დენიხ სოკეტი</div>
+            <div>розетка</div>
+        </li>
+
+        <li>
+            <div>შუქის ჩამრთველი</div>
+            <div>выключатель</div>
+        </li>
+
+        <li>
+            <div>უჯრა</div>
+            <div>ящик</div>
+        </li>
+
+        <li>
+            <div>ელექტრო ჩაიდანი</div>
+            <div>эл. чайник</div>
+        </li>
+
+        <li>
+            <div>საჭრელი დაფა</div>
+            <div>разделочная доска</div>
+        </li>
+
+        <li>
+            <div>ბოთლი</div>
+            <div>бутылка</div>
+        </li>
+
+        <li>
+            <div>მარილი</div>
+            <div>соль</div>
+        </li>
+
+        <li>
+            <div>შაქარი</div>
+            <div>сахар</div>
+        </li>
+
+        <li>
+            <div>ბრინჯი</div>
+            <div>рис</div>
+        </li>
+
+        <li>
+            <div>მაკარონი</div>
+            <div>макароны</div>
+        </li>
+
+        <li>
+            <div>სოიოს სოუსი</div>
+            <div>соевый соус</div>
+        </li>
+
+        <li>
+            <div>დაბატკბობელი</div>
+            <div>сахарозаменитель</div>
+        </li>
+
+        <li>
+            <div>ჰერკულესი</div>
+            <div>овсянка(геркулес)</div>
+        </li>
+
+    </ol>
+    <div id="count"></div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+</script>
