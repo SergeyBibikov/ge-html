@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>ზედსართავი სახელი</div>
+            <div>имя прилагательное</div>
+        </li>
+        <li>
+            <div>არსებითი სახელი</div>
+            <div>имя существительное</div>
+        </li>
+        <li>
+            <div>ზმნა</div>
+            <div>глагол</div>
+        </li>
+        <li>
+            <div>ზმნაზედა</div>
+            <div>наречие</div>
+        </li>
+        <li>
+            <div>ბრუნვა</div>
+            <div>падеж</div>
+        </li>
+        <li>
+            <div>ახლანდელი დრო</div>
+            <div>настоящее время</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+</script>

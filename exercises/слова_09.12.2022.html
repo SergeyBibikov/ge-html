@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>თეთრი</div>
+            <div>белый</div>
+        </li>
+        <li>
+            <div>შავი</div>
+            <div>черный</div>
+        </li>
+        <li>
+            <div>მწვანე</div>
+            <div>зелёный</div>
+        </li>
+        <li>
+            <div>ყვითელი</div>
+            <div>желтый</div>
+        </li>
+        <li>
+            <div>ლურჯი</div>
+            <div>синий</div>
+        </li>
+        <li>
+            <div>წითელი</div>
+            <div>красный</div>
+        </li>
+        <li>
+            <div>სტაფილოსფერი</div>
+            <div>оранжевый</div>
+        </li>
+        <li>
+            <div>მეწამული</div>
+            <div>фиолетовый</div>
+        </li>
+        <li>
+            <div>ოქროსდერი</div>
+            <div>золотой</div>
+        </li>
+        <li>
+            <div>ნაცრისფერი</div>
+            <div>серый</div>
+        </li>
+        <li>
+            <div>ყქვისფერი</div>
+            <div>коричневый</div>
+        </li>
+        <li>
+            <div>ცისფერი</div>
+            <div>голубой</div>
+        </li>
+        <li>
+            <div>მაღალი</div>
+            <div>высокий</div>
+        </li>
+
+        <li>
+            <div>დაბალი</div>
+            <div>низкий</div>
+        </li>
+
+        <li>
+            <div>სწრაფი</div>
+            <div>быстрый</div>
+        </li>
+
+        <li>
+            <div>ნელი</div>
+            <div>медленный</div>
+        </li>
+        <li>
+            <div>ძლიერი</div>
+            <div>сильный</div>
+        </li>
+
+        <li>
+            <div>სუსტი</div>
+            <div>слабый</div>
+        </li>
+
+        <li>
+            <div>ჭკვიანი</div>
+            <div>умный</div>
+        </li>
+
+        <li>
+            <div>სულელი</div>
+            <div>глупый</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+</script>
