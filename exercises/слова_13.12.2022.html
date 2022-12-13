@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>ფართები</div>
+            <div>площади(напр., коммерческие)</div>
+        </li>
+        <li>
+            <div>მიწა</div>
+            <div>земля</div>
+        </li>
+        <li>
+            <div>ნაკვეთი</div>
+            <div>участок</div>
+        </li>
+        <li>
+            <div>ძებნა</div>
+            <div>поиск</div>
+        </li>
+        <li>
+            <div>დახურვა</div>
+            <div>закрытие</div>
+        </li>
+        <li>
+            <div>შეთანხმება</div>
+            <div>соглашение, согласие, соглашаться</div>
+        </li>
+        <li>
+            <div>სამომხმარებლო</div>
+            <div>пользовательский, потребительский</div>
+        </li>
+        <li>
+            <div>სარგებლობა</div>
+            <div>пользование</div>
+        </li>
+        <li>
+            <div>გაგრძელება</div>
+            <div>продолжение</div>
+
+        </li>
+        <li>
+            <div>ჩანაწერი</div>
+            <div>запись</div>
+        </li>
+        <li>
+            <div>ამოყენება</div>
+            <div>приравнять, пристроить</div>
+        </li>
+        <li>
+            <div>მეტი</div>
+            <div>больше</div>
+        </li>
+        <li>
+            <div>ხილვა</div>
+            <div>зрение, смотреть</div>
+        </li>
+        <li>
+            <div>იხილეთ</div>
+            <div>смотрите (повелит.)</div>
+        </li>
+        <li>
+            <div>რაიონი</div>
+            <div>район</div>
+        </li>
+        <li>
+            <div>უბანი</div>
+            <div>участок, район</div>
+        </li>
+        <li>
+            <div>ყველა</div>
+            <div>все</div>
+        </li>
+        <li>
+            <div>საძინებელი</div>
+            <div>спальня</div>
+        </li>
+        <li>
+            <div>სააბაზანო ოთახი</div>
+            <div>ванная комната</div>
+        </li>
+        <li>
+            <div>საპირფარეშო</div>
+            <div>уборная</div>
+        </li>
+
+
+    </ol>
+    <div id="count"></div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+</script>
