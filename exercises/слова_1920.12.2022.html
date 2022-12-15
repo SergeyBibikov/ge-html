@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>სოფელი</div>
+            <div>деревня</div>
+        </li>
+
+        <li>
+            <div>ცხოვრობს</div>
+            <div>живёт</div>
+        </li>
+
+        <li>
+            <div>მამაჩემი</div>
+            <div>мой отец</div>
+        </li>
+
+        <li>
+            <div>სამინისტრო</div>
+            <div>министерство</div>
+        </li>
+
+        <li>
+            <div>მუშაობს</div>
+            <div>работает</div>
+        </li>
+
+        <li>
+            <div>კაცის</div>
+            <div>мужской</div>
+        </li>
+
+        <li>
+            <div>სერიოზული</div>
+            <div>серьёзно</div>
+        </li>
+
+        <li>
+            <div>პეპელა</div>
+            <div>бабочка</div>
+        </li>
+
+        <li>
+            <div>ჭრელი</div>
+            <div>разноцветный</div>
+        </li>
+
+        <li>
+            <div>პაპა</div>
+            <div>дедушка</div>
+        </li>
+
+        <li>
+            <div>მოხუცი</div>
+            <div>старый (о человеке)</div>
+        </li>
+
+        <li>
+            <div>პური</div>
+            <div>хлеб</div>
+        </li>
+
+        <li>
+            <div>გემრიელი</div>
+            <div>вкусный</div>
+        </li>
+
+        <li>
+            <div>ცხელი</div>
+            <div>горячий</div>
+        </li>
+
+        <li>
+            <div>ცივი</div>
+            <div>холодный</div>
+        </li>
+
+        <li>
+            <div>ჟირაფი</div>
+            <div>жираф</div>
+        </li>
+
+        <li>
+            <div>ქალის</div>
+            <div>женский</div>
+        </li>
+
+        <li>
+            <div>რვეული</div>
+            <div>тетрадь</div>
+        </li>
+
+        <li>
+            <div>სურათი</div>
+            <div>картина</div>
+        </li>
+
+        <li>
+            <div>საწოლი</div>
+            <div>кровать</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+    <button onclick=shuffle()>Shuffle</button>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+</script>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>ბაბუა</div>
+            <div>дедушка</div>
+        </li>
+
+        <li>
+            <div>კეთილი</div>
+            <div>добрый</div>
+        </li>
+
+        <li>
+            <div>ბოროტი</div>
+            <div>злой</div>
+        </li>
+
+        <li>
+            <div>ბავშვი</div>
+            <div>ребёнок</div>
+        </li>
+
+        <li>
+            <div>გემი</div>
+            <div>корабль</div>
+        </li>
+
+        <li>
+            <div>გედი</div>
+            <div>лебедь</div>
+        </li>
+
+        <li>
+            <div>დედაჩემი</div>
+            <div>моя мама</div>
+        </li>
+
+        <li>
+            <div>ვარდი</div>
+            <div>роза</div>
+        </li>
+
+        <li>
+            <div>ყვავილი</div>
+            <div>цветок</div>
+        </li>
+
+        <li>
+            <div>ვეფხვი</div>
+            <div>тигр</div>
+        </li>
+
+        <li>
+            <div>ცხოველია</div>
+            <div>животное</div>
+        </li>
+
+        <li>
+            <div>გარეული</div>
+            <div>дикий</div>
+        </li>
+
+        <li>
+            <div>ღონიერი</div>
+            <div>сильный (о человеке)</div>
+        </li>
+        <li>
+            <div>ზღვა</div>
+            <div>море</div>
+        </li>
+
+        <li>
+            <div>ადამიანი</div>
+            <div>человек</div>
+        </li>
+
+        <li>
+            <div>თასი</div>
+            <div>чаша</div>
+        </li>
+
+        <li>
+            <div>ასხია</div>
+            <div>налито</div>
+        </li>
+
+        <li>
+            <div>გვერდი</div>
+            <div>страница</div>
+        </li>
+
+        <li>
+            <div>გონიერი</div>
+            <div>умный, толковый</div>
+        </li>
+
+        <li>
+            <div>კოხტა</div>
+            <div>элегантный, изящный, красивый</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+    <button onclick=shuffle()>Shuffle</button>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+</script>

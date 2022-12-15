@@ -14,6 +14,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
 </style>
 
 <body>

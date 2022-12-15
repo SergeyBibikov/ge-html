@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>სავარჯიშო</div>
+            <div>упражнение</div>
+        </li>
+
+        <li>
+            <div>კრებული</div>
+            <div>собрание, сборник</div>
+        </li>
+
+        <li>
+            <div>შემსწავლელთათვის</div>
+            <div>для учащихся</div>
+        </li>
+
+        <li>
+            <div>წინასიტყვაობა</div>
+            <div>предисловие</div>
+        </li>
+
+        <li>
+            <div>შინაარსი</div>
+            <div>содержание</div>
+        </li>
+
+        <li>
+            <div>თავი</div>
+            <div>глава и голова</div>
+        </li>
+
+        <li>
+            <div>ბგერათა</div>
+            <div>произношение</div>
+        </li>
+
+        <li>
+            <div>შესახებ</div>
+            <div>о (чём-то, послелог)</div>
+        </li>
+
+        <li>
+            <div>თანდებულიანი ფორმები</div>
+            <div>послелоговые формы</div>
+        </li>
+
+        <li>
+            <div>წარმოქმნა</div>
+            <div>создание, образование</div>
+        </li>
+
+        <li>
+            <div>თავაზიანი</div>
+            <div>вежливый</div>
+        </li>
+
+        <li>
+            <div>უხეში</div>
+            <div>грубый</div>
+        </li>
+
+        <li>
+            <div>მაერთებელი</div>
+            <div>сочинительный</div>
+        </li>
+
+        <li>
+            <div>მაქვემდებარებელი</div>
+            <div>подчинительный</div>
+        </li>
+
+        <li>
+            <div>კავშირი</div>
+            <div>союз</div>
+        </li>
+
+        <li>
+            <div>აი</div>
+            <div>здесь</div>
+        </li>
+        <li>
+            <div>იქ</div>
+            <div>там</div>
+        </li>
+
+        <li>
+            <div>უყვარს</div>
+            <div>любит</div>
+        </li>
+
+        <li>
+            <div>ია</div>
+            <div>фиалка</div>
+        </li>
+
+        <li>
+            <div>ბებია</div>
+            <div>бабушка</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+    <button onclick=shuffle()>Shuffle</button>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+</script>
