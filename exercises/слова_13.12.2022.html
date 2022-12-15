@@ -103,9 +103,28 @@
 
     </ol>
     <div id="count"></div>
+    <button onclick=shuffle()>Shuffle</button>
 </body>
 
 <script>
     const i = document.querySelectorAll('li')
     document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+        ol.replaceChildren(...result);
+    }
 </script>
