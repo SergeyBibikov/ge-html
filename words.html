@@ -1240,7 +1240,7 @@
         <div>опыт</div>
     </div>
 
-    <div class="category">Общее</div>
+    <div class="category">Слова без привязки к теме</div>
     <div class="wrapper">
         <div>სახელი</div>
         <div>имя</div>
@@ -1367,6 +1367,34 @@
 
     </div>
 
+    <button id="getJson" onclick=getJson()>json</button>
+    <div id="placeholder"></div>
+
 </body>
+<script>
+    function getJson() {
+        const allWords = [];
+
+        document.querySelectorAll('.wrapper div:nth-child(odd)')
+            .forEach(e => allWords.push(e.textContent));
+
+        const result = [];
+
+        allWords.forEach(e => {
+            const t = document.evaluate(
+                `//div[text()="${e}"]/following-sibling::div`,
+                document,
+                null,
+                XPathResult.STRING_TYPE).stringValue
+            result.push(`'${e}':'${t}'`)
+        })
+        const content = `{
+            ${result.join(',\\n')}
+        }
+        `
+        document.querySelector('#placeholder').textContent = content
+    }
+</script>
+
 
 </html>
