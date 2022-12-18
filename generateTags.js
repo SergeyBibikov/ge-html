@@ -12,7 +12,8 @@ function generate() {
         for (const d of duplicates) {
             delete _newWords[d]
         }
-        result.push(`Следующие слова уже есть в словаре, они были удалены: ${duplicates} `)
+        if (duplicates.length > 0) result.push(`Следующие слова уже есть в словаре, они были удалены: ${duplicates} `)
+
     }
 
     for (const [ge, ru] of Object.entries(_newWords)) {
