@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: 16px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>მარცვალი</div>
+            <div>слог</div>
+        </li>
+
+        <li>
+            <div>გადაწერე</div>
+            <div>переписать</div>
+        </li>
+
+        <li>
+            <div>ცხრილი</div>
+            <div>таблица, сетка</div>
+        </li>
+
+        <li>
+            <div>შესაბამისი</div>
+            <div>соответствующий</div>
+        </li>
+
+        <li>
+            <div>წინა</div>
+            <div>предыдущий, предшествующий</div>
+        </li>
+
+        <li>
+            <div>ამოიწერე</div>
+            <div>выпишите</div>
+        </li>
+
+        <li>
+            <div>წყვილი</div>
+            <div>пара</div>
+        </li>
+
+        <li>
+            <div>რომლებიც</div>
+            <div>которые(союз)</div>
+        </li>
+
+        <li>
+            <div>ასო</div>
+            <div>буква</div>
+        </li>
+
+        <li>
+            <div>განსხვავდებიან</div>
+            <div>они отличаются</div>
+        </li>
+
+        <li>
+            <div>დააწყვილე</div>
+            <div>объедините в пары (повелит.)</div>
+        </li>
+
+        <li>
+            <div>სწორად</div>
+            <div>верно, корректно</div>
+        </li>
+
+        <li>
+            <div>წაიკითხე</div>
+            <div>прочитайте</div>
+        </li>
+
+        <li>
+            <div>მოისმინე</div>
+            <div>послушайте</div>
+        </li>
+
+        <li>
+            <div>მასწავლებელი</div>
+            <div>учитель</div>
+        </li>
+
+        <li>
+            <div>წაკითხული</div>
+            <div>прочитанный</div>
+        </li>
+
+        <li>
+            <div>გამოტოვებული</div>
+            <div>пропущенный</div>
+        </li>
+
+        <li>
+            <div>ადგილი</div>
+            <div>место</div>
+        </li>
+
+        <li>
+            <div>ფური</div>
+            <div>корова</div>
+        </li>
+
+        <li>
+            <div>განსხვავებული</div>
+            <div>отличающийся, другой</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>
