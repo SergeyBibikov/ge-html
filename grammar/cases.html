@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Падежи</title>
+</head>
+<style>
+    body {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #casesWrapper {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #cases {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        margin: 0
+    }
+
+    .caseRu {
+        color: #425056;
+    }
+
+    .use {
+        margin-top: 100px;
+    }
+</style>
+
+<body>
+    <section id="casesWrapper">
+        <span>Список падежей</span>
+        <div id="cases">
+            <div class="caseGe">სახელობითი</div>
+            <div class="caseRu">Именительный</div>
+            <div class="caseGe">მოთხრობითი</div>
+            <div class="caseRu">Повествовательный(Эргативный)</div>
+            <div class="caseGe">მიცემითი</div>
+            <div class="caseRu">Дательный</div>
+            <div class="caseGe">ნათესაობითი</div>
+            <div class="caseRu">Родительный</div>
+            <div class="caseGe">მოქმედებითი</div>
+            <div class="caseRu">Творительный</div>
+            <div class="caseGe">ვითარებითი</div>
+            <div class="caseRu">Направительный(Обстоятельственный)</div>
+            <div class="caseGe">წოდებითი</div>
+            <div class="caseRu">Звательный</div>
+        </div>
+    </section>
+    <section class="use">
+        Применение
+    </section>
+
+</body>
+
+</html>
