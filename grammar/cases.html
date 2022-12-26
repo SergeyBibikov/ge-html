@@ -16,8 +16,8 @@
         flex-direction: column;
     }
 
-    #casesWrapper {
-        margin-top: 50px;
+    section {
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -35,14 +35,31 @@
         color: #425056;
     }
 
-    .use {
-        margin-top: 100px;
+
+    .header {
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    td,
+    th {
+        padding: 2px;
+        font-weight: 400;
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+    }
+
+    tbody {
+        width: 100%;
     }
 </style>
 
 <body>
     <section id="casesWrapper">
-        <span>Список падежей</span>
+        <span class="header">Список падежей</span>
         <div id="cases">
             <div class="caseGe">სახელობითი</div>
             <div class="caseRu">Именительный</div>
@@ -55,13 +72,94 @@
             <div class="caseGe">მოქმედებითი</div>
             <div class="caseRu">Творительный</div>
             <div class="caseGe">ვითარებითი</div>
-            <div class="caseRu">Направительный(Обстоятельственный)</div>
+            <div class="caseRu">Обстоятельственный(Направительный)</div>
             <div class="caseGe">წოდებითი</div>
             <div class="caseRu">Звательный</div>
         </div>
     </section>
-    <section class="use">
-        Применение
+    <section id="use">
+
+        <section id="categories">
+            <span class="header">Категории существительных</span>
+            <p class="cat">
+                К первой категории относятся слова, основа которых оканчивается на
+                согласную. Например: <span class="examples"> კაცი, წიგნები</span>
+            </p>
+            <p class="cat">
+                Ко второй категории относятся слова, основа которых оканчивается на
+                гласную. Например: <span class="examples"> წყარო, კლდე</span>
+            </p>
+        </section>
+        <section id="tables">
+            <span class="header">Падежные окончания</span>
+            <table>
+                <tr>
+                    <th>Падеж</th>
+                    <th>Окончание слов 1 категории</th>
+                    <th>Окончание слов 2 категории</th>
+                    <th>Пример ед.ч 1 кат.</th>
+                    <th>Пример мн.ч</th>
+                    <th>Пример ед.ч 2 кат.</th>
+                </tr>
+                <tr>
+                    <td>Именительный</td>
+                    <td>ი</td>
+                    <td>нет</td>
+                    <td>კაცი</td>
+                    <td>წიგნები</td>
+                    <td>წყარო</td>
+                </tr>
+                <tr>
+                    <td>Повествовательный</td>
+                    <td>მა</td>
+                    <td>მ</td>
+                    <td>კაცმა</td>
+                    <td>წიგნებმა</td>
+                    <td>წყარომ</td>
+                </tr>
+                <tr>
+                    <td>Дательный</td>
+                    <td>ს</td>
+                    <td>ს</td>
+                    <td>კაცს</td>
+                    <td>წიგნებს</td>
+                    <td>წყაროს</td>
+                </tr>
+                <tr>
+                    <td>Родительный</td>
+                    <td>ის</td>
+                    <td>ს</td>
+                    <td>კაცის</td>
+                    <td>წიგნების</td>
+                    <td>წყაროს</td>
+                </tr>
+                <tr>
+                    <td>Творительный</td>
+                    <td>ით</td>
+                    <td>თი</td>
+                    <td>კაცით</td>
+                    <td>წიგნებით</td>
+                    <td>წყაროთი</td>
+                </tr>
+                <tr>
+                    <td>Обстоятельственный</td>
+                    <td>ად</td>
+                    <td>დ</td>
+                    <td>კაცად</td>
+                    <td>წიგნებად</td>
+                    <td>წყაროდ</td>
+                </tr>
+                <tr>
+                    <td>Звательный</td>
+                    <td>ო</td>
+                    <td>ვ (с именами собственными окончания нет)</td>
+                    <td>კაცო</td>
+                    <td>წიგნებო</td>
+                    <td>წყაროვ</td>
+                </tr>
+            </table>
+
+        </section>
     </section>
 
 </body>
