@@ -8,96 +8,185 @@
     <title>Настоящее время</title>
 </head>
 <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: min(16px, 3.2vw);
+    }
+
+    #action {
+        color: #af851a;
+    }
+
+    #movement {
+        color: #4d6066;
+    }
+
+    #condition {
+        color: #634863;
+    }
+
     section {
         margin-top: 10px;
+    }
+
+    .header {
+        font-weight: 600;
+    }
+
+    table {
+        text-align: left;
+    }
+
+    th {
+        font-weight: 200;
+    }
+
+    td {
+        border-right: solid 1px rgb(202, 163, 163);
+        border-bottom: solid 1px rgb(202, 163, 163);
+    }
+
+    .mark {
+        color: rgb(232, 27, 27);
     }
 </style>
 
 <body>
     <section id="action">
-        <span class="header">Глаголы действия</span>
+        <span class="header">Глаголы действия (пример - "читать")</span>
         <table>
             <tr>
                 <th>Лицо</th>
                 <th>Форма ед.ч</th>
                 <th>Форма мн.ч</th>
-                <th>Пример</th>
             </tr>
             <tr>
                 <td>1 л.</td>
                 <td>ვ____</td>
                 <td>ვ____თ</td>
-                <td>TBD</td>
             </tr>
             <tr>
                 <td>2 л.</td>
                 <td>____</td>
                 <td>____თ</td>
-                <td>TBD</td>
             </tr>
             <tr>
                 <td>3 л.</td>
                 <td>____ს</td>
                 <td>____(ა/ე)ნ</td>
-                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Примеры</td>
+                <td>--------------------</td>
+                <td>--------------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">ვ</span>კითხულობ</td>
+                <td><span class="mark">ვ</span>კითხულობ<span class="mark">თ</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td>კითხულობ</td>
+                <td>კითხულობ<span class="mark">თ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td>კითხულობ<span class="mark">ს</span></td>
+                <td>კითხულობ<span class="mark">ენ</span></td>
             </tr>
         </table>
     </section>
     <section id="movement">
-        <span class="header">Глаголы движения</span>
+        <span class="header">Глаголы движения (пример - "идти")</span>
         <table>
             <tr>
                 <th>Лицо</th>
                 <th>Форма ед.ч</th>
                 <th>Форма мн.ч</th>
-                <th>Пример</th>
             </tr>
             <tr>
                 <td>1 л.</td>
-                <td>(მი/მოვ/დავ)____ვარ</td>
+                <td>(მივ/მოვ/დავ)____ვარ</td>
                 <td>(მი/მოვ/დავ)____ვართ</td>
-                <td>TBD</td>
             </tr>
             <tr>
                 <td>2 л.</td>
                 <td>(მი/მო/და)____ხარ</td>
                 <td>(მი/მო/და)____ხართ</td>
-                <td>TBD</td>
             </tr>
             <tr>
                 <td>3 л.</td>
                 <td>(მი/მო/და)____ს</td>
                 <td>(მი/მო/და)____(ა,ე)ნ</td>
-                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Примеры</td>
+                <td>--------------------------------</td>
+                <td>--------------------------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">მივ</span>დი<span class="mark">ვარ</span></td>
+                <td><span class="mark">მივ</span>დი<span class="mark">ვართ</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">მი</span>დი<span class="mark">ხარ</span></td>
+                <td><span class="mark">მი</span>დი<span class="mark">ხართ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">მი</span>დი<span class="mark">ს</span></td>
+                <td><span class="mark">მი</span>დი<span class="mark">ან</span></td>
             </tr>
         </table>
     </section>
     <section id="condition">
-        <span class="header">Глаголы состояния</span>
+        <span class="header">Глаголы состояния (пример - "спать")</span>
         <table>
             <tr>
                 <th>Лицо</th>
                 <th>Форма ед.ч</th>
                 <th>Форма мн.ч</th>
-                <th>Пример</th>
             </tr>
             <tr>
                 <td>1 л.</td>
                 <td>მ____</td>
                 <td>გვ____</td>
-                <td>TBD</td>
             </tr>
             <tr>
                 <td>2 л.</td>
                 <td>გ____</td>
                 <td>გ____თ</td>
-                <td>TBD</td>
             </tr>
             <tr>
                 <td>3 л.</td>
                 <td>ს____</td>
                 <td>ს____თ</td>
-                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Примеры</td>
+                <td>-----------------</td>
+                <td>-----------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">მ</span>ძინავს</td>
+                <td><span class="mark">გვ</span>ძინავს</td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">გ</span>ძინავს</td>
+                <td><span class="mark">გ</span>ძინავ<span class="mark">თ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">ს</span>ძინავს</td>
+                <td><span class="mark">ს</span>ძინავ<span class="mark">თ</span></td>
             </tr>
         </table>
     </section>
