@@ -7,10 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Будущее время</title>
 </head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: min(16px, 3.2vw);
+    }
+
+    #action {
+        color: #af851a;
+    }
+
+    #movement {
+        color: #4d6066;
+    }
+
+    #condition {
+        color: #634863;
+    }
+
+    section {
+        margin-top: 10px;
+    }
+
+    .header {
+        font-weight: 600;
+    }
+
+    table {
+        text-align: left;
+    }
+
+    th {
+        font-weight: 200;
+    }
+
+    td {
+        border-right: solid 1px rgb(202, 163, 163);
+        border-bottom: solid 1px rgb(202, 163, 163);
+    }
+
+    .mark {
+        color: rgb(232, 27, 27);
+    }
+</style>
 
 <body>
     <section id="action">
-        <span class="header">Глаголы действия (пример - "")</span>
+        <span class="header">Глаголы действия (пример - "читать")</span><br />
         <span>{П} - одна из приставок წა, და или გა</span>
         <table>
             <tr>
@@ -38,10 +84,25 @@
                 <td>-----------------</td>
                 <td>-----------------</td>
             </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">წავ</span>იკითხა<span class="mark">ვ</span></td>
+                <td><span class="mark">წავ</span>იკითხა<span class="mark">ვთ</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">წა</span>იკითხა<span class="mark">ვ</span></td>
+                <td><span class="mark">წა</span>იკითხა<span class="mark">ვთ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">წა</span>იკითხა<span class="mark">ვს</span></td>
+                <td><span class="mark">წა</span>იკითხა<span class="mark">ვენ</span></td>
+            </tr>
         </table>
     </section>
     <section id="movement">
-        <span class="header">Глаголы движения (пример - "")</span>
+        <span class="header">Глаголы движения (пример - "идти")</span><br />
         <span>{П} - одна из приставок წა, მო или შე</span>
         <table>
             <tr>
@@ -69,10 +130,25 @@
                 <td>-----------------</td>
                 <td>-----------------</td>
             </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">წა</span>ვა<span class="mark">ლ</span></td>
+                <td><span class="mark">წა</span>ვა<span class="mark">ლთ</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">წახ</span>ვა<span class="mark">ლ</span></td>
+                <td><span class="mark">წახ</span>ვა<span class="mark">ლთ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">წა</span>ვ<span class="mark">ა</span></td>
+                <td><span class="mark">წა</span>ვ<span class="mark">ლენ</span></td>
+            </tr>
         </table>
     </section>
     <section id="condition">
-        <span class="header">Глаголы состояния (пример - "")</span>
+        <span class="header">Глаголы состояния (пример - "замерзнуть")</span><br />
         <span>{П} - შე или მო</span>
         <table>
             <tr>
@@ -87,8 +163,8 @@
             </tr>
             <tr>
                 <td>2 л.</td>
+                <td>შეგ/მოგ/გე____ება</td>
                 <td>შეგ/გე____ებათ|მოგ___ებთა</td>
-                <td>____</td>
             </tr>
             <tr>
                 <td>3 л.</td>
@@ -99,6 +175,21 @@
                 <td>Примеры</td>
                 <td>-----------------</td>
                 <td>-----------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">შემ</span>ცივდ<span class="mark">ება</span></td>
+                <td><span class="mark">შეგვ</span>ცივდ<span class="mark">ება</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">შეგ</span>ცივდ<span class="mark">ება</span></td>
+                <td><span class="mark">შეგ</span>ცივდ<span class="mark">ებათ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">შეს</span>ცივდ<span class="mark">ება</span></td>
+                <td><span class="mark">შეს</span>ცივდ<span class="mark">ებათ</span></td>
             </tr>
         </table>
     </section>
