@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Несовершенный вид</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: min(16px, 3.2vw);
+    }
+
+    #action {
+        color: #af851a;
+    }
+
+    #movement {
+        color: #4d6066;
+    }
+
+    #condition {
+        color: #634863;
+    }
+
+    section {
+        margin-top: 10px;
+    }
+
+    .header {
+        font-weight: 600;
+    }
+
+    table {
+        text-align: left;
+    }
+
+    th {
+        font-weight: 200;
+    }
+
+    td {
+        border-right: solid 1px rgb(202, 163, 163);
+        border-bottom: solid 1px rgb(202, 163, 163);
+    }
+
+    .mark {
+        color: rgb(232, 27, 27);
+    }
+</style>
+
+<body>
+    <section id="action">
+        <span class="header">Глаголы действия (пример - "разговаривать")</span><br />
+        <table>
+            <tr>
+                <th>Лицо</th>
+                <th>Форма ед.ч</th>
+                <th>Форма мн.ч</th>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td>ვ____დი</td>
+                <td>ვ____დით</td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td>____დი</td>
+                <td>____დით</td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td>____და</td>
+                <td>____დნენ</td>
+            </tr>
+            <tr>
+                <td>Примеры</td>
+                <td>-----------------</td>
+                <td>-----------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">ვ</span>ლაპარაკობ<span class="mark">დი</span></td>
+                <td><span class="mark">ვ</span>ლაპარაკობ<span class="mark">დით</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td>ლაპარაკობ<span class="mark">დი</span></td>
+                <td>ლაპარაკობ<span class="mark">დით</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td>ლაპარაკობ<span class="mark">და</span></td>
+                <td>ლაპარაკობ<span class="mark">დნენ</span></td>
+            </tr>
+        </table>
+    </section>
+    <section id="movement">
+        <span class="header">Глаголы движения (пример - "идти")</span><br />
+        <span>{П} - одна из приставок მი, მო или და</span>
+        <table>
+            <tr>
+                <th>Лицо</th>
+                <th>Форма ед.ч</th>
+                <th>Форма мн.ч</th>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td>{П}ვ____(ო/-)დი</td>
+                <td>{П}ვ____(ო/-)დით</td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td>{П}____(ო/-)დი</td>
+                <td>{П}____(ო/-)დით</td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td>{П}____(ო/-)და</td>
+                <td>{П}____(ო/-)დნენ</td>
+            </tr>
+            <tr>
+                <td>Примеры</td>
+                <td>-----------------</td>
+                <td>-----------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">მივ</span>დი<span class="mark">ოდი</span></td>
+                <td><span class="mark">მივ</span>დი<span class="mark">ოდით</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">მი</span>დი<span class="mark">ოდი</span></td>
+                <td><span class="mark">მი</span>დი<span class="mark">ოდით</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">მი</span>დი<span class="mark">ოდა</span></td>
+                <td><span class="mark">მი</span>დი<span class="mark">ოდნენ</span></td>
+            </tr>
+        </table>
+    </section>
+    <section id="condition">
+        <span class="header">Глаголы состояния (пример - "")</span><br />
+        <table>
+            <tr>
+                <th>Лицо</th>
+                <th>Форма ед.ч</th>
+                <th>Форма мн.ч</th>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td>მ____(ო/-)და</td>
+                <td>გვ____(ო/-)და</td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td>გ____(ო/-)და</td>
+                <td>გ____(ო/-)დათ</td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td>(ხ/ჰ/უ/ე)____(ო/-)და</td>
+                <td>(ხ/ჰ/უ/ე)____(ო/-)დათ</td>
+            </tr>
+            <tr>
+                <td>Примеры</td>
+                <td>-----------------</td>
+                <td>-----------------</td>
+            </tr>
+            <tr>
+                <td>1 л.</td>
+                <td><span class="mark">მ</span>ეძინებ<span class="mark">ოდა</span></td>
+                <td><span class="mark">გვ</span>ეძინებ<span class="mark">ოდა</span></td>
+            </tr>
+            <tr>
+                <td>2 л.</td>
+                <td><span class="mark">გ</span>ეძინებ<span class="mark">ოდა</span></td>
+                <td><span class="mark">გ</span>ეძინებ<span class="mark">ოდათ</span></td>
+            </tr>
+            <tr>
+                <td>3 л.</td>
+                <td><span class="mark">ე</span>ძინებ<span class="mark">ოდა</span></td>
+                <td><span class="mark">ე</span>ძინებ<span class="mark">ოდათ</span></td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+
+</html>
