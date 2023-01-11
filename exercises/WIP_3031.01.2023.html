@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>გამოაცხო</div>
+            <div>испекла</div>
+        </li>
+
+        <li>
+            <div>ციკანი</div>
+            <div>обобщённое название детёныша козла, тура и подобных копытных</div>
+        </li>
+
+        <li>
+            <div>წილი</div>
+            <div>часть, доля</div>
+        </li>
+
+        <li>
+            <div>ვცხოვრობდი</div>
+            <div>жил (1 л.)</div>
+        </li>
+
+        <li>
+            <div>შემოვიდა</div>
+            <div>вошёл, попал в помещение (3 л.)</div>
+        </li>
+
+        <li>
+            <div>გოჭი</div>
+            <div>поросёнок</div>
+        </li>
+
+        <li>
+            <div>კოჭი</div>
+            <div>балка, катушка</div>
+        </li>
+
+        <li>
+            <div>ნაშიერი</div>
+            <div>детёныш</div>
+        </li>
+
+        <li>
+            <div>ჭალა</div>
+            <div>пойма</div>
+        </li>
+
+        <li>
+            <div>ჩალა</div>
+            <div>солома</div>
+        </li>
+
+        <li>
+            <div>მოუტანა</div>
+            <div>принёс (3 л.)</div>
+        </li>
+
+        <li>
+            <div>საქონელი</div>
+            <div>скот</div>
+        </li>
+
+        <li>
+            <div>ტივი</div>
+            <div>плот</div>
+        </li>
+
+        <li>
+            <div>თივა</div>
+            <div>сено</div>
+        </li>
+
+        <li>
+            <div>დაცურავს</div>
+            <div>плывёт (3 л.)</div>
+        </li>
+
+        <li>
+            <div>კერა</div>
+            <div>очаг</div>
+        </li>
+
+        <li>
+            <div>საუბარი</div>
+            <div>беседа</div>
+        </li>
+
+
+        <li>
+            <div>უხდება</div>
+            <div>идёт (ей, ему)</div>
+        </li>
+
+        <li>
+            <div>ჭია</div>
+            <div>червь</div>
+        </li>
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>
