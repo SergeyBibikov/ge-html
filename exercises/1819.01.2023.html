@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        <li>
+            <div>სხვადასხვაფრად</div>
+            <div>по-разному</div>
+        </li>
+
+        <li>
+            <div>წვიმა</div>
+            <div>дождь</div>
+        </li>
+
+        <li>
+            <div>წამალი</div>
+            <div>лекарство</div>
+        </li>
+
+        <li>
+            <div>წვენი</div>
+            <div>сок</div>
+        </li>
+
+        <li>
+            <div>მოსწავლე</div>
+            <div>учащийся, ученик</div>
+        </li>
+
+        <li>
+            <div>ფრჩხილი</div>
+            <div>скобка</div>
+        </li>
+
+        <li>
+            <div>არჩევა</div>
+            <div>избрать</div>
+        </li>
+
+        <li>
+            <div>შეარჩიე</div>
+            <div>выбери (повелит)</div>
+        </li>
+
+        <li>
+            <div>წინადადება</div>
+            <div>предложение</div>
+        </li>
+
+        <li>
+            <div>ცხვარი</div>
+            <div>овца</div>
+        </li>
+
+        <li>
+            <div>ცხვირი</div>
+            <div>нос</div>
+        </li>
+
+        <li>
+            <div>კალთა</div>
+            <div>склон, подол, пола</div>
+        </li>
+
+        <li>
+            <div>ბალახი</div>
+            <div>трава</div>
+        </li>
+
+        <li>
+            <div>ძოვს</div>
+            <div>пасётся</div>
+        </li>
+
+        <li>
+            <div>ამ</div>
+            <div>этот</div>
+        </li>
+
+        <li>
+            <div>თოჯინა</div>
+            <div>кукла</div>
+        </li>
+
+        <li>
+            <div>იარაღი</div>
+            <div>орудие, инструмент, оружие</div>
+        </li>
+
+        <li>
+            <div>წინდა</div>
+            <div>носок, чулок</div>
+        </li>
+
+        <li>
+            <div>დაეკარგა</div>
+            <div>потерялся(3 л.)</div>
+        </li>
+
+        <li>
+            <div>ხმა</div>
+            <div>голос</div>
+        </li>
+
+        <li>
+            <div>უფროსი</div>
+            <div>старший</div>
+        </li>
+
+        <li>
+            <div>ვარცხნის</div>
+            <div>расчёсывает</div>
+        </li>
+
+        <li>
+            <div>ბარი</div>
+            <div>низина, дол</div>
+        </li>
+
+        <li>
+            <div>მოიარეს</div>
+            <div>посетили, обошли (3 л.)</div>
+        </li>
+
+        <li>
+            <div>ხეხილის</div>
+            <div>плодовый, фруктовый (сад, например)</div>
+        </li>
+
+        <li>
+            <div>ნაყინი</div>
+            <div>мороженое</div>
+        </li>
+
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>
