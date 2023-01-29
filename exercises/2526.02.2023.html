@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        
+                <li>
+                <div>შარვალი</div>
+                <div>брюки</div>
+                </li>
+        
+
+                <li>
+                <div>ჩამოკიდა</div>
+                <div>он повесил</div>
+                </li>
+        
+
+                <li>
+                <div>ხმელი</div>
+                <div>чёрствый, сухопарый</div>
+                </li>
+        
+
+                <li>
+                <div>შეაგდო</div>
+                <div>закинул, забил</div>
+                </li>
+        
+
+                <li>
+                <div>ქრის</div>
+                <div>он дует</div>
+                </li>
+        
+
+                <li>
+                <div>საპონი</div>
+                <div>мыло</div>
+                </li>
+        
+
+                <li>
+                <div>მძღოლი</div>
+                <div>водитель</div>
+                </li>
+        
+
+                <li>
+                <div>ხორბალი</div>
+                <div>пшеница</div>
+                </li>
+        
+
+                <li>
+                <div>აბაზანა</div>
+                <div>ванна</div>
+                </li>
+        
+
+                <li>
+                <div>დევს</div>
+                <div>он лежит</div>
+                </li>
+        
+
+                <li>
+                <div>საფრთხე</div>
+                <div>опасность</div>
+                </li>
+        
+
+                <li>
+                <div>საფხეკი</div>
+                <div>скребок (инструмент)</div>
+                </li>
+        
+
+                <li>
+                <div>მეჩხერი</div>
+                <div>изреженный</div>
+                </li>
+        
+
+                <li>
+                <div>მარხილი</div>
+                <div>сани</div>
+                </li>
+        
+
+                <li>
+                <div>კარნახი</div>
+                <div>диктант</div>
+                </li>
+        
+
+                <li>
+                <div>გარეუბანი</div>
+                <div>пригород, окраина</div>
+                </li>
+        
+
+                <li>
+                <div>სულ</div>
+                <div>сплошь</div>
+                </li>
+        
+
+                <li>
+                <div>გორაკი</div>
+                <div>горка, холм</div>
+                </li>
+        
+
+                <li>
+                <div>ამზადებს</div>
+                <div>он готовит</div>
+                </li>
+        
+
+                <li>
+                <div>გავა</div>
+                <div>он покинет, уйдёт</div>
+                </li>
+        
+
+                <li>
+                <div>კოდალა</div>
+                <div>дятел</div>
+                </li>
+        
+
+                <li>
+                <div>აკაკუნებს</div>
+                <div>он стучит</div>
+                </li>
+        
+
+                <li>
+                <div>ნისკარტი</div>
+                <div>клюв</div>
+                </li>
+        
+
+                <li>
+                <div>უყურებს</div>
+                <div>смотрит, глядит</div>
+                </li>
+        
+
+                <li>
+                <div>გაკვირვებული</div>
+                <div>удивлённый</div>
+                </li>
+        
+
+                <li>
+                <div>შეუკერა</div>
+                <div>она обшила</div>
+                </li>
+        
+
+                <li>
+                <div>ელვაშესაკრავი</div>
+                <div>молния на одежде</div>
+                </li>
+        
+
+                <li>
+                <div>ასტკივდა</div>
+                <div>он болел (например, зуб)</div>
+                </li>
+        
+
+                <li>
+                <div>კიდევ</div>
+                <div>ещё</div>
+                </li>
+        
+
+                <li>
+                <div>ტკბილეული</div>
+                <div>лакомство, сладости</div>
+                </li>
+        
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>

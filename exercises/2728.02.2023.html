@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        
+                <li>
+                <div>აგტკივდება</div>
+                <div>он будет болеть (например, зуб)</div>
+                </li>
+        
+
+                <li>
+                <div>ექიმი</div>
+                <div>врач</div>
+                </li>
+        
+
+                <li>
+                <div>მიდის</div>
+                <div>он идёт</div>
+                </li>
+        
+
+                <li>
+                <div>კლასელები</div>
+                <div>одноклассники</div>
+                </li>
+        
+
+                <li>
+                <div>ხატვა</div>
+                <div>рисовать</div>
+                </li>
+        
+
+                <li>
+                <div>ქაღალდი</div>
+                <div>бумага</div>
+                </li>
+        
+
+                <li>
+                <div>გააკეთა</div>
+                <div>он сделал</div>
+                </li>
+        
+
+                <li>
+                <div>მაღალი</div>
+                <div>высокий</div>
+                </li>
+        
+
+                <li>
+                <div>ანძა</div>
+                <div>мачта</div>
+                </li>
+        
+
+                <li>
+                <div>წევრი</div>
+                <div>член коллектива</div>
+                </li>
+        
+
+                <li>
+                <div>გეზი</div>
+                <div>направление, курс</div>
+                </li>
+        
+
+                <li>
+                <div>აიღო</div>
+                <div>взял</div>
+                </li>
+        
+
+                <li>
+                <div>ღუზა</div>
+                <div>якорь</div>
+                </li>
+        
+
+                <li>
+                <div>კაუჭი</div>
+                <div>крючок</div>
+                </li>
+        
+
+                <li>
+                <div>მოგზაურობა</div>
+                <div>странствие, путешествие, плавание</div>
+                </li>
+        
+
+                <li>
+                <div>მდებარეობს</div>
+                <div>он находится</div>
+                </li>
+        
+
+                <li>
+                <div>სიმაღლე</div>
+                <div>высота</div>
+                </li>
+        
+
+                <li>
+                <div>აუზი</div>
+                <div>бассейн</div>
+                </li>
+        
+
+                <li>
+                <div>ფართობი</div>
+                <div>площадь(абстрактная)</div>
+                </li>
+        
+
+                <li>
+                <div>მოედანი</div>
+                <div>площадь(часть города)</div>
+                </li>
+        
+
+                <li>
+                <div>მტკნარი</div>
+                <div>пресный</div>
+                </li>
+        
+
+                <li>
+                <div>თევზი</div>
+                <div>рыба</div>
+                </li>
+        
+
+                <li>
+                <div>გაყინული</div>
+                <div>ледяной, мороженый</div>
+                </li>
+        
+
+                <li>
+                <div>ბოლო</div>
+                <div>конец</div>
+                </li>
+        
+
+                <li>
+                <div>დასაწყისი</div>
+                <div>начало</div>
+                </li>
+        
+
+                <li>
+                <div>აქაურობა</div>
+                <div>тут</div>
+                </li>
+        
+
+                <li>
+                <div>ხშირად</div>
+                <div>часто</div>
+                </li>
+        
+
+                <li>
+                <div>სტუმრობენ</div>
+                <div>они посещают</div>
+                </li>
+        
+
+                <li>
+                <div>ეძახიან</div>
+                <div>они называют</div>
+                </li>
+        
+
+                <li>
+                <div>ამზადებენ</div>
+                <div>они готовят, делают</div>
+                </li>
+        
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>

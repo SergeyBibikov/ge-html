@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        
+                <li>
+                <div>იმდენი</div>
+                <div>столько</div>
+                </li>
+        
+
+                <li>
+                <div>უკაკუნა</div>
+                <div>он постучал</div>
+                </li>
+        
+
+                <li>
+                <div>სანამ</div>
+                <div>до тех пор, как (until)</div>
+                </li>
+        
+
+                <li>
+                <div>კიტრი</div>
+                <div>огурец</div>
+                </li>
+        
+
+                <li>
+                <div>მატლი</div>
+                <div>личинка</div>
+                </li>
+        
+
+                <li>
+                <div>ამოათრია</div>
+                <div>он вытащил</div>
+                </li>
+        
+
+                <li>
+                <div>ნელა</div>
+                <div>помеленьку, не спеша</div>
+                </li>
+        
+
+                <li>
+                <div>მეტკინა</div>
+                <div>у меня защемило (спину, сердце и т.д.)</div>
+                </li>
+        
+
+                <li>
+                <div>კვნესა</div>
+                <div>стон</div>
+                </li>
+        
+
+                <li>
+                <div>ფრთხილად</div>
+                <div>осторожно, бережно</div>
+                </li>
+        
+
+                <li>
+                <div>შეგიძლია</div>
+                <div>ты можешь</div>
+                </li>
+        
+
+                <li>
+                <div>კინაღამ</div>
+                <div>чуть было, едва</div>
+                </li>
+        
+
+                <li>
+                <div>გაოცებული</div>
+                <div>изумлённый, недоумевающий</div>
+                </li>
+        
+
+                <li>
+                <div>ლაპარაკობ</div>
+                <div>ты говоришь</div>
+                </li>
+        
+
+                <li>
+                <div>ვლაპარაკობთ</div>
+                <div>мы говорим</div>
+                </li>
+        
+
+                <li>
+                <div>ლაპარაკობთ</div>
+                <div>вы говорите</div>
+                </li>
+        
+
+                <li>
+                <div>ლაპარაკობენ</div>
+                <div>они говорят</div>
+                </li>
+        
+
+                <li>
+                <div>კაკლისოდენა</div>
+                <div>размером с орех</div>
+                </li>
+        
+
+                <li>
+                <div>გაუხდა</div>
+                <div>они стали какими-то</div>
+                </li>
+        
+
+                <li>
+                <div>მიუგო</div>
+                <div>он ответил</div>
+                </li>
+        
+
+                <li>
+                <div>ნეკნი</div>
+                <div>ребро</div>
+                </li>
+        
+
+                <li>
+                <div>აბა</div>
+                <div>ну</div>
+                </li>
+        
+
+                <li>
+                <div>მაშინ</div>
+                <div>тогда, то</div>
+                </li>
+        
+
+                <li>
+                <div>ნახავ</div>
+                <div>ты увидишь</div>
+                </li>
+        
+
+                <li>
+                <div>ხომ</div>
+                <div>небось, ли</div>
+                </li>
+        
+
+                <li>
+                <div>შემაწყვეტინე</div>
+                <div>ты меня перебил, прервал</div>
+                </li>
+        
+
+                <li>
+                <div>თანაც</div>
+                <div>причём, к тому же</div>
+                </li>
+        
+
+                <li>
+                <div>შეგარგოს</div>
+                <div>Приятного аппетита</div>
+                </li>
+        
+
+                <li>
+                <div>მადა</div>
+                <div>аппетит</div>
+                </li>
+        
+
+                <li>
+                <div>ნაწილაკი</div>
+                <div>частица</div>
+                </li>
+        
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>

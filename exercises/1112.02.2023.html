@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+
+        <li>
+            <div>თვე</div>
+            <div>месяц</div>
+        </li>
+
+
+        <li>
+            <div>გაუკეთა</div>
+            <div>сделал (3 л.)</div>
+        </li>
+
+
+        <li>
+            <div>მავთული</div>
+            <div>проволока</div>
+        </li>
+
+
+        <li>
+            <div>გაკეთებული</div>
+            <div>сделанный</div>
+        </li>
+
+
+        <li>
+            <div>დაკიდებული</div>
+            <div>висящий</div>
+        </li>
+
+
+        <li>
+            <div>საშუალება</div>
+            <div>средство</div>
+        </li>
+
+
+        <li>
+            <div>საწერი</div>
+            <div>предназначенный для письма</div>
+        </li>
+
+
+        <li>
+            <div>რომელშიც</div>
+            <div>в котором (союз)</div>
+        </li>
+
+
+        <li>
+            <div>ვწვავთ</div>
+            <div>мы жарим</div>
+        </li>
+
+
+        <li>
+            <div>რამე</div>
+            <div>что-либо; нечто</div>
+        </li>
+
+
+        <li>
+            <div>ხტუნავს</div>
+            <div>прыгает</div>
+        </li>
+
+
+        <li>
+            <div>მუსიკალური</div>
+            <div>музыкальный</div>
+        </li>
+
+
+        <li>
+            <div>შუა ხნის</div>
+            <div>средних лет</div>
+        </li>
+
+
+        <li>
+            <div>სათიბი</div>
+            <div>покос, косьба</div>
+        </li>
+
+
+        <li>
+            <div>ის</div>
+            <div>он, она</div>
+        </li>
+
+
+        <li>
+            <div>მეკუთვნის</div>
+            <div>принадлежит</div>
+        </li>
+
+
+        <li>
+            <div>ფერადი</div>
+            <div>цветной</div>
+        </li>
+
+
+        <li>
+            <div>გაანაწილე</div>
+            <div>распредели</div>
+        </li>
+
+
+        <li>
+            <div>გახაზე</div>
+            <div>выдели</div>
+        </li>
+
+
+        <li>
+            <div>კისერი</div>
+            <div>шея</div>
+        </li>
+
+
+        <li>
+            <div>ხატავს</div>
+            <div>рисует (3 л.)</div>
+        </li>
+
+
+        <li>
+            <div>მაღაზია</div>
+            <div>магазин</div>
+        </li>
+
+
+        <li>
+            <div>ვეშაპი</div>
+            <div>кит</div>
+        </li>
+
+
+        <li>
+            <div>სპილო</div>
+            <div>слон</div>
+        </li>
+
+
+        <li>
+            <div>დაწერილი</div>
+            <div>написанный</div>
+        </li>
+
+
+        <li>
+            <div>დახატა</div>
+            <div>он нарисовал</div>
+        </li>
+
+
+        <li>
+            <div>გაიღვიძა</div>
+            <div>он проснулся</div>
+        </li>
+
+
+        <li>
+            <div>სოკო</div>
+            <div>гриб</div>
+        </li>
+
+
+        <li>
+            <div>მიდიან</div>
+            <div>они идут</div>
+        </li>
+
+
+        <li>
+            <div>გვერდით</div>
+            <div>сбоку, рядком</div>
+        </li>
+
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>

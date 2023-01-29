@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+
+        <li>
+            <div>ჭრიჭინებს</div>
+            <div>стрекочет</div>
+        </li>
+
+
+        <li>
+            <div>ჭერამი</div>
+            <div>абрикос</div>
+        </li>
+
+
+        <li>
+            <div>ჭაბუკი</div>
+            <div>юноша</div>
+        </li>
+
+
+        <li>
+            <div>შეურჩიე</div>
+            <div>выбери (повелит.)</div>
+        </li>
+
+
+        <li>
+            <div>ჯიხვი</div>
+            <div>тур (животное)</div>
+        </li>
+
+
+        <li>
+            <div>ჯოგი</div>
+            <div>табун</div>
+        </li>
+
+
+        <li>
+            <div>ჯაჭვი</div>
+            <div>цепь</div>
+        </li>
+
+
+        <li>
+            <div>ჯემპრი</div>
+            <div>джемпер</div>
+        </li>
+
+
+        <li>
+            <div>მოაჯირი</div>
+            <div>перила</div>
+        </li>
+
+
+        <li>
+            <div>მაჯა</div>
+            <div>запястье</div>
+        </li>
+
+
+        <li>
+            <div>სამაჯური</div>
+            <div>браслет</div>
+        </li>
+
+
+        <li>
+            <div>ჯიბე</div>
+            <div>карман</div>
+        </li>
+
+
+        <li>
+            <div>ჯეჯილი</div>
+            <div>пророщенный овёс</div>
+        </li>
+
+
+        <li>
+            <div>უკეთია</div>
+            <div>носит</div>
+        </li>
+
+
+        <li>
+            <div>ჯავრი</div>
+            <div>досада</div>
+        </li>
+
+
+        <li>
+            <div>ოქრო</div>
+            <div>золото</div>
+        </li>
+
+
+        <li>
+            <div>აჩუქა</div>
+            <div>он подарил</div>
+        </li>
+
+
+        <li>
+            <div>ბიბინებს</div>
+            <div>волнуется (двигается от ветра)</div>
+        </li>
+
+
+        <li>
+            <div>აცვია</div>
+            <div>он носит</div>
+        </li>
+
+
+        <li>
+            <div>თხა</div>
+            <div>коза</div>
+        </li>
+
+
+        <li>
+            <div>ძოვს</div>
+            <div>пощипывает траву, пасётся</div>
+        </li>
+
+
+        <li>
+            <div>კიბე</div>
+            <div>лестница</div>
+        </li>
+
+
+        <li>
+            <div>ჩადის</div>
+            <div>он спускается</div>
+        </li>
+
+
+        <li>
+            <div>ეჯახება</div>
+            <div>он врезается, сталкивается с</div>
+        </li>
+
+
+        <li>
+            <div>უჯრა</div>
+            <div>колонка</div>
+        </li>
+
+
+        <li>
+            <div>მაქმანი</div>
+            <div>кружево</div>
+        </li>
+
+
+        <li>
+            <div>ქამარი</div>
+            <div>пояс</div>
+        </li>
+
+
+        <li>
+            <div>ფქვილი</div>
+            <div>мукА</div>
+        </li>
+
+
+        <li>
+            <div>მოახლე</div>
+            <div>горничная</div>
+        </li>
+
+
+        <li>
+            <div>საქანელა</div>
+            <div>качели</div>
+        </li>
+
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>

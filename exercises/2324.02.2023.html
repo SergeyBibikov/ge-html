@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-size: max(3vw, 16px);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li:after {
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 100%;
+        margin: -1px -100% 1px 0;
+        border-bottom: 1px dotted rgb(86, 82, 82);
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <ol>
+        
+                <li>
+                <div>ძირი</div>
+                <div>низ, дно</div>
+                </li>
+        
+
+                <li>
+                <div>ძილი</div>
+                <div>сон</div>
+                </li>
+        
+
+                <li>
+                <div>უძირო</div>
+                <div>бездонный</div>
+                </li>
+        
+
+                <li>
+                <div>ძალა</div>
+                <div>сила</div>
+                </li>
+        
+
+                <li>
+                <div>წიფელი</div>
+                <div>бук</div>
+                </li>
+        
+
+                <li>
+                <div>ღაწვი</div>
+                <div>скула</div>
+                </li>
+        
+
+                <li>
+                <div>ხიჭვი</div>
+                <div>заноза</div>
+                </li>
+        
+
+                <li>
+                <div>საწური</div>
+                <div>ситечко</div>
+                </li>
+        
+
+                <li>
+                <div>ბროწეული</div>
+                <div>гранат</div>
+                </li>
+        
+
+                <li>
+                <div>მწარე</div>
+                <div>горький</div>
+                </li>
+        
+
+                <li>
+                <div>წყნარი</div>
+                <div>спокойный</div>
+                </li>
+        
+
+                <li>
+                <div>ფიფქი</div>
+                <div>снежинка</div>
+                </li>
+        
+
+                <li>
+                <div>შედგენილი</div>
+                <div>составленный, составной</div>
+                </li>
+        
+
+                <li>
+                <div>ცვივა</div>
+                <div>они сыплются</div>
+                </li>
+        
+
+                <li>
+                <div>გააღე</div>
+                <div>открой</div>
+                </li>
+        
+
+                <li>
+                <div>უთხრა</div>
+                <div>он сказал ему</div>
+                </li>
+        
+
+                <li>
+                <div>ზღაპარი</div>
+                <div>сказка</div>
+                </li>
+        
+
+                <li>
+                <div>გმირი</div>
+                <div>герой</div>
+                </li>
+        
+
+                <li>
+                <div>კამეჩი</div>
+                <div>буйвол</div>
+                </li>
+        
+
+                <li>
+                <div>დაუსხა</div>
+                <div>он налил</div>
+                </li>
+        
+
+                <li>
+                <div>თოფი</div>
+                <div>ружьё</div>
+                </li>
+        
+
+                <li>
+                <div>ცერა თითი</div>
+                <div>большой палец</div>
+                </li>
+        
+
+                <li>
+                <div>მსუქანი</div>
+                <div>тучный, мясистый</div>
+                </li>
+        
+
+                <li>
+                <div>ჯარისკაცი</div>
+                <div>воин</div>
+                </li>
+        
+
+                <li>
+                <div>მხარი</div>
+                <div>плечо</div>
+                </li>
+        
+
+                <li>
+                <div>დაუყარა</div>
+                <div>он кинул кому-то</div>
+                </li>
+        
+
+                <li>
+                <div>გათალა</div>
+                <div>он обтесал что-то</div>
+                </li>
+        
+
+                <li>
+                <div>რეკავს</div>
+                <div>он звонит</div>
+                </li>
+        
+
+                <li>
+                <div>დავლიე</div>
+                <div>я выпил</div>
+                </li>
+        
+
+                <li>
+                <div>დაჯდა</div>
+                <div>он сел</div>
+                </li>
+        
+    </ol>
+    <div id="count"></div>
+    <div class="controls">
+        <button onclick=shuffle()>Shuffle</button>
+        <button onclick=hideRu()>Only Ge</button>
+        <button onclick=hideGe()>Only Ru</button>
+        <button onclick=showAll()>All</button>
+    </div>
+</body>
+
+<script>
+    const i = document.querySelectorAll('li')
+    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
+
+    function shuffle() {
+        const ol = document.querySelector('ol');
+        const lis = ol.querySelectorAll('li');
+        const result = [];
+        const indexes = [];
+        for (let i = 0; i < lis.length; i++) {
+            indexes.push(i);
+        }
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length)
+            const indexToPush = indexes[randomIndex]
+            indexes.splice(randomIndex, 1)
+
+            result.push(lis[indexToPush])
+        }
+
+        ol.replaceChildren(...result);
+    }
+    function hideRu() {
+        hide("even")
+        show("odd")
+    }
+    function hideGe() {
+        hide("odd")
+        show("even")
+    }
+    function hide(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
+    }
+    function show(which) {
+        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
+    }
+    function showAll() {
+        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
+    }
+</script>
