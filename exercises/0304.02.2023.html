@@ -269,4 +269,11 @@
     function showAll() {
         document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
     }
+
+    function toggleColor(el) {
+        const s = el.style
+        s.backgroundColor === 'teal'
+            ? s.backgroundColor = 'initial'
+            : s.backgroundColor = 'teal'
+    }
 </script>
