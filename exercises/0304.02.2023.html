@@ -234,6 +234,8 @@
     const i = document.querySelectorAll('li')
     document.querySelector('#count').textContent = `Всего слов: ${i.length}`
 
+    i.forEach(el => el.addEventListener('click', () => toggleColor(el)))
+
     function shuffle() {
         const ol = document.querySelector('ol');
         const lis = ol.querySelectorAll('li');
@@ -272,8 +274,10 @@
 
     function toggleColor(el) {
         const s = el.style
-        s.backgroundColor === 'teal'
+        const newColor = 'rgb(168, 130, 221)'
+
+        s.backgroundColor === newColor
             ? s.backgroundColor = 'initial'
-            : s.backgroundColor = 'teal'
+            : s.backgroundColor = newColor
     }
 </script>
