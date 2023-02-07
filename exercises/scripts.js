@@ -4,6 +4,11 @@ document.querySelector('#count').textContent = `Всего слов: ${i.length}
 
 i.forEach(el => el.addEventListener('click', () => toggleColor(el)))
 
+const MIDDLE_ELEMENT_STYLE = i[(i.length / 2) - 1].style
+MIDDLE_ELEMENT_STYLE.borderBottomColor = '#A24936'
+MIDDLE_ELEMENT_STYLE.borderBottomWidth = '1px'
+MIDDLE_ELEMENT_STYLE.borderBottomStyle = 'solid'
+
 function shuffle() {
     const ol = document.querySelector('ol');
     const lis = ol.querySelectorAll('li');
@@ -21,6 +26,7 @@ function shuffle() {
     }
 
     ol.replaceChildren(...result);
+    MIDDLE_ELEMENT_STYLE.border = 'initial'
 }
 
 function hideRu() {
