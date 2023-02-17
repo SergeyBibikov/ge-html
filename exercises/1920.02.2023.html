@@ -4,218 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    body {
-        font-size: max(3vw, 16px);
-    }
-
-    li {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    li:after {
-        content: '';
-        display: inline-block;
-        width: 200%;
-        height: 100%;
-        margin: -1px -100% 1px 0;
-        border-bottom: 1px dotted rgb(86, 82, 82);
-    }
-
-    .controls {
-        display: flex;
-        flex-direction: row;
-    }
-
-    button {
-        margin: 5px;
-    }
-</style>
 
 <body>
     <ol>
-        
-                <li>
-                <div>გაიგო</div>
-                <div>он понял</div>
-                </li>
-        
 
-                <li>
-                <div>მოჭიდავე</div>
-                <div>борец</div>
-                </li>
-        
+        <li>
+            <div>გაიგო</div>
+            <div>он понял</div>
+        </li>
 
-                <li>
-                <div>ნაცვალსახელი</div>
-                <div>местоимение</div>
-                </li>
-        
 
-                <li>
-                <div>ეჯიბრება</div>
-                <div>соревнуются, состязаются</div>
-                </li>
-        
+        <li>
+            <div>მოჭიდავე</div>
+            <div>борец</div>
+        </li>
 
-                <li>
-                <div>პატარაობა</div>
-                <div>детство</div>
-                </li>
-        
 
-                <li>
-                <div>პატარაობიდანვე</div>
-                <div>с малых лет, с детства</div>
-                </li>
-        
+        <li>
+            <div>ნაცვალსახელი</div>
+            <div>местоимение</div>
+        </li>
 
-                <li>
-                <div>მურაბა</div>
-                <div>варенье</div>
-                </li>
-        
 
-                <li>
-                <div>მოხარშა</div>
-                <div>он приготовил</div>
-                </li>
-        
+        <li>
+            <div>ეჯიბრება</div>
+            <div>соревнуются, состязаются</div>
+        </li>
 
-                <li>
-                <div>საუკუნე</div>
-                <div>век</div>
-                </li>
-        
 
-                <li>
-                <div>თვისტომი</div>
-                <div>соплеменник</div>
-                </li>
-        
+        <li>
+            <div>პატარაობა</div>
+            <div>детство</div>
+        </li>
 
-                <li>
-                <div>მიუვა</div>
-                <div>он придёт</div>
-                </li>
-        
 
-                <li>
-                <div>გამხმარი</div>
-                <div>сушёный, сухой</div>
-                </li>
-        
+        <li>
+            <div>პატარაობიდანვე</div>
+            <div>с малых лет, с детства</div>
+        </li>
 
-                <li>
-                <div>სასარგებლო</div>
-                <div>полезный</div>
-                </li>
-        
 
-                <li>
-                <div>ჯანმრთელობა</div>
-                <div>здоровье</div>
-                </li>
-        
+        <li>
+            <div>მურაბა</div>
+            <div>варенье</div>
+        </li>
 
-                <li>
-                <div>უამრავი</div>
-                <div>множество, уйма</div>
-                </li>
-        
 
-                <li>
-                <div>მზადდება</div>
-                <div>они готовятся</div>
-                </li>
-        
+        <li>
+            <div>მოხარშა</div>
+            <div>он приготовил</div>
+        </li>
 
-                <li>
-                <div>ჭუჭყი</div>
-                <div>грязь</div>
-                </li>
-        
 
-                <li>
-                <div>ჯუჯა</div>
-                <div>карлик</div>
-                </li>
-        
+        <li>
+            <div>საუკუნე</div>
+            <div>век</div>
+        </li>
 
-                <li>
-                <div>მაჯლაჯუნა</div>
-                <div>кошмар</div>
-                </li>
-        
 
-                <li>
-                <div>რჯული</div>
-                <div>закон (больше, как вера, порядок)</div>
-                </li>
-        
+        <li>
+            <div>თვისტომი</div>
+            <div>соплеменник</div>
+        </li>
 
-                <li>
-                <div>მატარებელი</div>
-                <div>поезд</div>
-                </li>
-        
 
-                <li>
-                <div>თოკი</div>
-                <div>верёвка</div>
-                </li>
-        
+        <li>
+            <div>მიუვა</div>
+            <div>он придёт</div>
+        </li>
 
-                <li>
-                <div>თეფში</div>
-                <div>тарелка</div>
-                </li>
-        
 
-                <li>
-                <div>თაფლი</div>
-                <div>мёд</div>
-                </li>
-        
+        <li>
+            <div>გამხმარი</div>
+            <div>сушёный, сухой</div>
+        </li>
 
-                <li>
-                <div>მტერი</div>
-                <div>враг</div>
-                </li>
-        
 
-                <li>
-                <div>მტრედი</div>
-                <div>голубь</div>
-                </li>
-        
+        <li>
+            <div>სასარგებლო</div>
+            <div>полезный</div>
+        </li>
 
-                <li>
-                <div>მტვერი</div>
-                <div>пыль</div>
-                </li>
-        
 
-                <li>
-                <div>ტირილი</div>
-                <div>плачь</div>
-                </li>
-        
+        <li>
+            <div>ჯანმრთელობა</div>
+            <div>здоровье</div>
+        </li>
 
-                <li>
-                <div>ტვირთი</div>
-                <div>груз, бремя, обуза</div>
-                </li>
-        
 
-                <li>
-                <div>პორტი</div>
-                <div>порт</div>
-                </li>
-        
+        <li>
+            <div>უამრავი</div>
+            <div>множество, уйма</div>
+        </li>
+
+
+        <li>
+            <div>მზადდება</div>
+            <div>они готовятся</div>
+        </li>
+
+
+        <li>
+            <div>ჭუჭყი</div>
+            <div>грязь</div>
+        </li>
+
+
+        <li>
+            <div>ჯუჯა</div>
+            <div>карлик</div>
+        </li>
+
+
+        <li>
+            <div>მაჯლაჯუნა</div>
+            <div>кошмар</div>
+        </li>
+
+
+        <li>
+            <div>რჯული</div>
+            <div>закон (больше, как вера, порядок)</div>
+        </li>
+
+
+        <li>
+            <div>მატარებელი</div>
+            <div>поезд</div>
+        </li>
+
+
+        <li>
+            <div>თოკი</div>
+            <div>верёвка</div>
+        </li>
+
+
+        <li>
+            <div>თეფში</div>
+            <div>тарелка</div>
+        </li>
+
+
+        <li>
+            <div>თაფლი</div>
+            <div>мёд</div>
+        </li>
+
+
+        <li>
+            <div>მტერი</div>
+            <div>враг</div>
+        </li>
+
+
+        <li>
+            <div>მტრედი</div>
+            <div>голубь</div>
+        </li>
+
+
+        <li>
+            <div>მტვერი</div>
+            <div>пыль</div>
+        </li>
+
+
+        <li>
+            <div>ტირილი</div>
+            <div>плачь</div>
+        </li>
+
+
+        <li>
+            <div>ტვირთი</div>
+            <div>груз, бремя, обуза</div>
+        </li>
+
+
+        <li>
+            <div>პორტი</div>
+            <div>порт</div>
+        </li>
+
     </ol>
     <div id="count"></div>
     <div class="controls">
@@ -226,43 +200,4 @@
     </div>
 </body>
 
-<script>
-    const i = document.querySelectorAll('li')
-    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
-
-    function shuffle() {
-        const ol = document.querySelector('ol');
-        const lis = ol.querySelectorAll('li');
-        const result = [];
-        const indexes = [];
-        for (let i = 0; i < lis.length; i++) {
-            indexes.push(i);
-        }
-        while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length)
-            const indexToPush = indexes[randomIndex]
-            indexes.splice(randomIndex, 1)
-
-            result.push(lis[indexToPush])
-        }
-
-        ol.replaceChildren(...result);
-    }
-    function hideRu() {
-        hide("even")
-        show("odd")
-    }
-    function hideGe() {
-        hide("odd")
-        show("even")
-    }
-    function hide(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
-    }
-    function show(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
-    }
-    function showAll() {
-        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
-    }
-</script>
+<script type="text/javascript" src="./scripts.js"></script>

@@ -4,218 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    body {
-        font-size: max(3vw, 16px);
-    }
-
-    li {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    li:after {
-        content: '';
-        display: inline-block;
-        width: 200%;
-        height: 100%;
-        margin: -1px -100% 1px 0;
-        border-bottom: 1px dotted rgb(86, 82, 82);
-    }
-
-    .controls {
-        display: flex;
-        flex-direction: row;
-    }
-
-    button {
-        margin: 5px;
-    }
-</style>
 
 <body>
     <ol>
-        
-                <li>
-                <div>მათი</div>
-                <div>их (например, их брат)</div>
-                </li>
-        
 
-                <li>
-                <div>ვენახი</div>
-                <div>виноградник</div>
-                </li>
-        
+        <li>
+            <div>მათი</div>
+            <div>их (например, их брат)</div>
+        </li>
 
-                <li>
-                <div>რთველი</div>
-                <div>сбор</div>
-                </li>
-        
 
-                <li>
-                <div>ძმისშვილი</div>
-                <div>племянник/ца со стороны брата</div>
-                </li>
-        
+        <li>
+            <div>ვენახი</div>
+            <div>виноградник</div>
+        </li>
 
-                <li>
-                <div>ეხმარებიან</div>
-                <div>они помогают</div>
-                </li>
-        
 
-                <li>
-                <div>კრეფა</div>
-                <div>собирать (например, ягоды)</div>
-                </li>
-        
+        <li>
+            <div>რთველი</div>
+            <div>сбор</div>
+        </li>
 
-                <li>
-                <div>მსხალი</div>
-                <div>груша</div>
-                </li>
-        
 
-                <li>
-                <div>სძინავს</div>
-                <div>спит</div>
-                </li>
-        
+        <li>
+            <div>ძმისშვილი</div>
+            <div>племянник/ца со стороны брата</div>
+        </li>
 
-                <li>
-                <div>ნარინჯისფერი</div>
-                <div>оранжевый цвет</div>
-                </li>
-        
 
-                <li>
-                <div>ბიძაშვილი</div>
-                <div>двоюродный брат/сестра со стороны дяди</div>
-                </li>
-        
+        <li>
+            <div>ეხმარებიან</div>
+            <div>они помогают</div>
+        </li>
 
-                <li>
-                <div>მოდის</div>
-                <div>он идёт, ходит</div>
-                </li>
-        
 
-                <li>
-                <div>ჯერ</div>
-                <div>пока, на данный момент</div>
-                </li>
-        
+        <li>
+            <div>კრეფა</div>
+            <div>собирать (например, ягоды)</div>
+        </li>
 
-                <li>
-                <div>მერე</div>
-                <div>потом</div>
-                </li>
-        
 
-                <li>
-                <div>ჩუმად</div>
-                <div>тихо</div>
-                </li>
-        
+        <li>
+            <div>მსხალი</div>
+            <div>груша</div>
+        </li>
 
-                <li>
-                <div>რადგან</div>
-                <div>потому что</div>
-                </li>
-        
 
-                <li>
-                <div>ამბობს</div>
-                <div>говорит</div>
-                </li>
-        
+        <li>
+            <div>სძინავს</div>
+            <div>спит</div>
+        </li>
 
-                <li>
-                <div>ბიცოლა</div>
-                <div>жена дяди</div>
-                </li>
-        
 
-                <li>
-                <div>თვალი</div>
-                <div>глаз</div>
-                </li>
-        
+        <li>
+            <div>ნარინჯისფერი</div>
+            <div>оранжевый цвет</div>
+        </li>
 
-                <li>
-                <div>ასმევს</div>
-                <div>он даёт кому-то попить</div>
-                </li>
-        
 
-                <li>
-                <div>საძოვარი</div>
-                <div>пастбище</div>
-                </li>
-        
+        <li>
+            <div>ბიძაშვილი</div>
+            <div>двоюродный брат/сестра со стороны дяди</div>
+        </li>
 
-                <li>
-                <div>უშვებს</div>
-                <div>он выпускает</div>
-                </li>
-        
 
-                <li>
-                <div>მწიფე</div>
-                <div>зрелый</div>
-                </li>
-        
+        <li>
+            <div>მოდის</div>
+            <div>он идёт, ходит</div>
+        </li>
 
-                <li>
-                <div>შეშა</div>
-                <div>дрова</div>
-                </li>
-        
 
-                <li>
-                <div>ჩეხს</div>
-                <div>он рубит</div>
-                </li>
-        
+        <li>
+            <div>ჯერ</div>
+            <div>пока, на данный момент</div>
+        </li>
 
-                <li>
-                <div>ღუმელი</div>
-                <div>печь</div>
-                </li>
-        
 
-                <li>
-                <div>იწვის</div>
-                <div>он горит</div>
-                </li>
-        
+        <li>
+            <div>მერე</div>
+            <div>потом</div>
+        </li>
 
-                <li>
-                <div>წვრილად</div>
-                <div>мелко</div>
-                </li>
-        
 
-                <li>
-                <div>ურიკა</div>
-                <div>тачка, тележка (небольшая)</div>
-                </li>
-        
+        <li>
+            <div>ჩუმად</div>
+            <div>тихо</div>
+        </li>
 
-                <li>
-                <div>ნაწილ-ნაწილ</div>
-                <div>частями</div>
-                </li>
-        
 
-                <li>
-                <div>აწყობს</div>
-                <div>он укладывает</div>
-                </li>
-        
+        <li>
+            <div>რადგან</div>
+            <div>потому что</div>
+        </li>
+
+
+        <li>
+            <div>ამბობს</div>
+            <div>говорит</div>
+        </li>
+
+
+        <li>
+            <div>ბიცოლა</div>
+            <div>жена дяди</div>
+        </li>
+
+
+        <li>
+            <div>თვალი</div>
+            <div>глаз</div>
+        </li>
+
+
+        <li>
+            <div>ასმევს</div>
+            <div>он даёт кому-то попить</div>
+        </li>
+
+
+        <li>
+            <div>საძოვარი</div>
+            <div>пастбище</div>
+        </li>
+
+
+        <li>
+            <div>უშვებს</div>
+            <div>он выпускает</div>
+        </li>
+
+
+        <li>
+            <div>მწიფე</div>
+            <div>зрелый</div>
+        </li>
+
+
+        <li>
+            <div>შეშა</div>
+            <div>дрова</div>
+        </li>
+
+
+        <li>
+            <div>ჩეხს</div>
+            <div>он рубит</div>
+        </li>
+
+
+        <li>
+            <div>ღუმელი</div>
+            <div>печь</div>
+        </li>
+
+
+        <li>
+            <div>იწვის</div>
+            <div>он горит</div>
+        </li>
+
+
+        <li>
+            <div>წვრილად</div>
+            <div>мелко</div>
+        </li>
+
+
+        <li>
+            <div>ურიკა</div>
+            <div>тачка, тележка (небольшая)</div>
+        </li>
+
+
+        <li>
+            <div>ნაწილ-ნაწილ</div>
+            <div>частями</div>
+        </li>
+
+
+        <li>
+            <div>აწყობს</div>
+            <div>он укладывает</div>
+        </li>
+
     </ol>
     <div id="count"></div>
     <div class="controls">
@@ -226,43 +200,4 @@
     </div>
 </body>
 
-<script>
-    const i = document.querySelectorAll('li')
-    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
-
-    function shuffle() {
-        const ol = document.querySelector('ol');
-        const lis = ol.querySelectorAll('li');
-        const result = [];
-        const indexes = [];
-        for (let i = 0; i < lis.length; i++) {
-            indexes.push(i);
-        }
-        while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length)
-            const indexToPush = indexes[randomIndex]
-            indexes.splice(randomIndex, 1)
-
-            result.push(lis[indexToPush])
-        }
-
-        ol.replaceChildren(...result);
-    }
-    function hideRu() {
-        hide("even")
-        show("odd")
-    }
-    function hideGe() {
-        hide("odd")
-        show("even")
-    }
-    function hide(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
-    }
-    function show(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
-    }
-    function showAll() {
-        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
-    }
-</script>
+<script type="text/javascript" src="./scripts.js"></script>
