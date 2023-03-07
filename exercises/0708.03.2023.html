@@ -4,218 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    body {
-        font-size: max(3vw, 16px);
-    }
-
-    li {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    li:after {
-        content: '';
-        display: inline-block;
-        width: 200%;
-        height: 100%;
-        margin: -1px -100% 1px 0;
-        border-bottom: 1px dotted rgb(86, 82, 82);
-    }
-
-    .controls {
-        display: flex;
-        flex-direction: row;
-    }
-
-    button {
-        margin: 5px;
-    }
-</style>
 
 <body>
     <ol>
-        
-                <li>
-                <div>აღარ</div>
-                <div>больше не...</div>
-                </li>
-        
 
-                <li>
-                <div>მოლაპარაკე</div>
-                <div>говорящий</div>
-                </li>
-        
+        <li>
+            <div>აღარ</div>
+            <div>больше не...</div>
+        </li>
 
-                <li>
-                <div>შეწუხდა</div>
-                <div>он рассроился</div>
-                </li>
-        
 
-                <li>
-                <div>ურჩია</div>
-                <div>он посоветовал, предположил</div>
-                </li>
-        
+        <li>
+            <div>მოლაპარაკე</div>
+            <div>говорящий</div>
+        </li>
 
-                <li>
-                <div>მოდი</div>
-                <div>давай(те) (= let's)</div>
-                </li>
-        
 
-                <li>
-                <div>მოვიქცეთ</div>
-                <div>нам нужно будет сделать</div>
-                </li>
-        
+        <li>
+            <div>შეწუხდა</div>
+            <div>он расстроился</div>
+        </li>
 
-                <li>
-                <div>ჩემნაირი</div>
-                <div>как я, как у меня</div>
-                </li>
-        
 
-                <li>
-                <div>დაგეხმარები</div>
-                <div>я тебе помогу</div>
-                </li>
-        
+        <li>
+            <div>ურჩია</div>
+            <div>он посоветовал, предположил</div>
+        </li>
 
-                <li>
-                <div>დამეხმარეთ</div>
-                <div>помогите мне</div>
-                </li>
-        
 
-                <li>
-                <div>დაფიქრდა</div>
-                <div>он подумал</div>
-                </li>
-        
+        <li>
+            <div>მოდი</div>
+            <div>давай(те) (= let's)</div>
+        </li>
 
-                <li>
-                <div>მეგობრობა</div>
-                <div>дружба</div>
-                </li>
-        
 
-                <li>
-                <div>უკეთესი</div>
-                <div>лучше, чем что-то</div>
-                </li>
-        
+        <li>
+            <div>მოვიქცეთ</div>
+            <div>нам нужно будет сделать</div>
+        </li>
 
-                <li>
-                <div>განგაში</div>
-                <div>смятение, тревога</div>
-                </li>
-        
 
-                <li>
-                <div>კაკაბი</div>
-                <div>каменная куропатка</div>
-                </li>
-        
+        <li>
+            <div>ჩემნაირი</div>
+            <div>как я, как у меня</div>
+        </li>
 
-                <li>
-                <div>კენკრა</div>
-                <div>ягода</div>
-                </li>
-        
 
-                <li>
-                <div>კვიცი</div>
-                <div>жеребёнок</div>
-                </li>
-        
+        <li>
+            <div>დაგეხმარები</div>
+            <div>я тебе помогу</div>
+        </li>
 
-                <li>
-                <div>საკერავი</div>
-                <div>швейный</div>
-                </li>
-        
 
-                <li>
-                <div>ბრძენი</div>
-                <div>мудрец</div>
-                </li>
-        
+        <li>
+            <div>დამეხმარეთ</div>
+            <div>помогите мне</div>
+        </li>
 
-                <li>
-                <div>ბიძია</div>
-                <div>дядя</div>
-                </li>
-        
 
-                <li>
-                <div>ბოძი</div>
-                <div>столб</div>
-                </li>
-        
+        <li>
+            <div>დაფიქრდა</div>
+            <div>он подумал</div>
+        </li>
 
-                <li>
-                <div>წიწვი</div>
-                <div>хвоя</div>
-                </li>
-        
 
-                <li>
-                <div>მოწყენილი</div>
-                <div>скучный</div>
-                </li>
-        
+        <li>
+            <div>მეგობრობა</div>
+            <div>дружба</div>
+        </li>
 
-                <li>
-                <div>მწვრთნელი</div>
-                <div>тренер</div>
-                </li>
-        
 
-                <li>
-                <div>ცა</div>
-                <div>небо</div>
-                </li>
-        
+        <li>
+            <div>უკეთესი</div>
+            <div>лучше, чем что-то</div>
+        </li>
 
-                <li>
-                <div>ცრემლი</div>
-                <div>слеза</div>
-                </li>
-        
 
-                <li>
-                <div>ცურვა</div>
-                <div>плавание</div>
-                </li>
-        
+        <li>
+            <div>განგაში</div>
+            <div>смятение, тревога</div>
+        </li>
 
-                <li>
-                <div>ციყვი</div>
-                <div>белка</div>
-                </li>
-        
 
-                <li>
-                <div>სიცოცხლე</div>
-                <div>жизнь (биологическая)</div>
-                </li>
-        
+        <li>
+            <div>კაკაბი</div>
+            <div>каменная куропатка</div>
+        </li>
 
-                <li>
-                <div>ნამცხვარი</div>
-                <div>печенье</div>
-                </li>
-        
 
-                <li>
-                <div>მეცხვარე</div>
-                <div>овцевод</div>
-                </li>
-        
+        <li>
+            <div>კენკრა</div>
+            <div>ягода</div>
+        </li>
+
+
+        <li>
+            <div>კვიცი</div>
+            <div>жеребёнок</div>
+        </li>
+
+
+        <li>
+            <div>საკერავი</div>
+            <div>швейный</div>
+        </li>
+
+
+        <li>
+            <div>ბრძენი</div>
+            <div>мудрец</div>
+        </li>
+
+
+        <li>
+            <div>ბიძია</div>
+            <div>дядя</div>
+        </li>
+
+
+        <li>
+            <div>ბოძი</div>
+            <div>столб</div>
+        </li>
+
+
+        <li>
+            <div>წიწვი</div>
+            <div>хвоя</div>
+        </li>
+
+
+        <li>
+            <div>მოწყენილი</div>
+            <div>скучный</div>
+        </li>
+
+
+        <li>
+            <div>მწვრთნელი</div>
+            <div>тренер</div>
+        </li>
+
+
+        <li>
+            <div>ცა</div>
+            <div>небо</div>
+        </li>
+
+
+        <li>
+            <div>ცრემლი</div>
+            <div>слеза</div>
+        </li>
+
+
+        <li>
+            <div>ცურვა</div>
+            <div>плавание</div>
+        </li>
+
+
+        <li>
+            <div>ციყვი</div>
+            <div>белка</div>
+        </li>
+
+
+        <li>
+            <div>სიცოცხლე</div>
+            <div>жизнь (биологическая)</div>
+        </li>
+
+
+        <li>
+            <div>ნამცხვარი</div>
+            <div>печенье</div>
+        </li>
+
+
+        <li>
+            <div>მეცხვარე</div>
+            <div>овцевод</div>
+        </li>
+
     </ol>
     <div id="count"></div>
     <div class="controls">
@@ -226,43 +200,4 @@
     </div>
 </body>
 
-<script>
-    const i = document.querySelectorAll('li')
-    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
-
-    function shuffle() {
-        const ol = document.querySelector('ol');
-        const lis = ol.querySelectorAll('li');
-        const result = [];
-        const indexes = [];
-        for (let i = 0; i < lis.length; i++) {
-            indexes.push(i);
-        }
-        while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length)
-            const indexToPush = indexes[randomIndex]
-            indexes.splice(randomIndex, 1)
-
-            result.push(lis[indexToPush])
-        }
-
-        ol.replaceChildren(...result);
-    }
-    function hideRu() {
-        hide("even")
-        show("odd")
-    }
-    function hideGe() {
-        hide("odd")
-        show("even")
-    }
-    function hide(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
-    }
-    function show(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
-    }
-    function showAll() {
-        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
-    }
-</script>
+<script type="text/javascript" src="./scripts.js"></script>

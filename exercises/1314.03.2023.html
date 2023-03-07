@@ -4,218 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    body {
-        font-size: max(3vw, 16px);
-    }
-
-    li {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    li:after {
-        content: '';
-        display: inline-block;
-        width: 200%;
-        height: 100%;
-        margin: -1px -100% 1px 0;
-        border-bottom: 1px dotted rgb(86, 82, 82);
-    }
-
-    .controls {
-        display: flex;
-        flex-direction: row;
-    }
-
-    button {
-        margin: 5px;
-    }
-</style>
 
 <body>
     <ol>
-        
-                <li>
-                <div>მოიფხანა</div>
-                <div>он почесал</div>
-                </li>
-        
 
-                <li>
-                <div>ყვავი</div>
-                <div>ворона</div>
-                </li>
-        
+        <li>
+            <div>მოიფხანა</div>
+            <div>он почесал</div>
+        </li>
 
-                <li>
-                <div>აფრთხობს</div>
-                <div>он пугает</div>
-                </li>
-        
 
-                <li>
-                <div>კვალი</div>
-                <div>след</div>
-                </li>
-        
+        <li>
+            <div>ყვავი</div>
+            <div>ворона</div>
+        </li>
 
-                <li>
-                <div>გვირილა</div>
-                <div>ромашка</div>
-                </li>
-        
 
-                <li>
-                <div>სამკურნალო</div>
-                <div>целебный, лечебный</div>
-                </li>
-        
+        <li>
+            <div>აფრთხობს</div>
+            <div>он пугает</div>
+        </li>
 
-                <li>
-                <div>ღრუტუნებს</div>
-                <div>хрюкает</div>
-                </li>
-        
 
-                <li>
-                <div>სია</div>
-                <div>список, перечень</div>
-                </li>
-        
+        <li>
+            <div>კვალი</div>
+            <div>след</div>
+        </li>
 
-                <li>
-                <div>წერია</div>
-                <div>он написан</div>
-                </li>
-        
 
-                <li>
-                <div>ღვარი</div>
-                <div>поток</div>
-                </li>
-        
+        <li>
+            <div>გვირილა</div>
+            <div>ромашка</div>
+        </li>
 
-                <li>
-                <div>მოვარდა</div>
-                <div>хлынул</div>
-                </li>
-        
 
-                <li>
-                <div>ღომი</div>
-                <div>нац. блюдо, аналог мамалыги, каша из кукурузной крупы</div>
-                </li>
-        
+        <li>
+            <div>სამკურნალო</div>
+            <div>целебный, лечебный</div>
+        </li>
 
-                <li>
-                <div>მოხარშვა</div>
-                <div>варка</div>
-                </li>
-        
 
-                <li>
-                <div>ვისწავლე</div>
-                <div>я научился</div>
-                </li>
-        
+        <li>
+            <div>ღრუტუნებს</div>
+            <div>хрюкает</div>
+        </li>
 
-                <li>
-                <div>ვსწავლობ</div>
-                <div>я учусь</div>
-                </li>
-        
 
-                <li>
-                <div>გერი ქალი</div>
-                <div>падчерица</div>
-                </li>
-        
+        <li>
+            <div>სია</div>
+            <div>список, перечень</div>
+        </li>
 
-                <li>
-                <div>გერი ვაჟი</div>
-                <div>пасынок</div>
-                </li>
-        
 
-                <li>
-                <div>ღერი</div>
-                <div>некий продолговатый тонкий предмет (типа спички, сигареты и тд)</div>
-                </li>
-        
+        <li>
+            <div>წერია</div>
+            <div>он написан</div>
+        </li>
 
-                <li>
-                <div>ასანთი</div>
-                <div>спичка</div>
-                </li>
-        
 
-                <li>
-                <div>ავიღე</div>
-                <div>я взял</div>
-                </li>
-        
+        <li>
+            <div>ღვარი</div>
+            <div>поток</div>
+        </li>
 
-                <li>
-                <div>გვირაბი</div>
-                <div>тоннель</div>
-                </li>
-        
 
-                <li>
-                <div>გუგუნი</div>
-                <div>гул, рокот</div>
-                </li>
-        
+        <li>
+            <div>მოვარდა</div>
+            <div>хлынул</div>
+        </li>
 
-                <li>
-                <div>გაისმა</div>
-                <div>он был услышан</div>
-                </li>
-        
 
-                <li>
-                <div>სახურავი</div>
-                <div>крыша</div>
-                </li>
-        
+        <li>
+            <div>ღომი</div>
+            <div>нац. блюдо, аналог мамалыги, каша из кукурузной крупы</div>
+        </li>
 
-                <li>
-                <div>ღუღუნი</div>
-                <div>воркование</div>
-                </li>
-        
 
-                <li>
-                <div>გავიგე</div>
-                <div>я услышал; я понял</div>
-                </li>
-        
+        <li>
+            <div>მოხარშვა</div>
+            <div>варка</div>
+        </li>
 
-                <li>
-                <div>ღია</div>
-                <div>открытый</div>
-                </li>
-        
 
-                <li>
-                <div>დახურული</div>
-                <div>закрытый</div>
-                </li>
-        
+        <li>
+            <div>ვისწავლე</div>
+            <div>я научился</div>
+        </li>
 
-                <li>
-                <div>ღელე</div>
-                <div>небольшой поток воды, типа ручья</div>
-                </li>
-        
 
-                <li>
-                <div>ამოხსენი</div>
-                <div>реши (например, ребус)</div>
-                </li>
-        
+        <li>
+            <div>ვსწავლობ</div>
+            <div>я учусь</div>
+        </li>
+
+
+        <li>
+            <div>გერი ქალი</div>
+            <div>падчерица</div>
+        </li>
+
+
+        <li>
+            <div>გერი ვაჟი</div>
+            <div>пасынок</div>
+        </li>
+
+
+        <li>
+            <div>ღერი</div>
+            <div>некий продолговатый тонкий предмет (типа спички, сигареты и тд)</div>
+        </li>
+
+
+        <li>
+            <div>ასანთი</div>
+            <div>спичка</div>
+        </li>
+
+
+        <li>
+            <div>ავიღე</div>
+            <div>я взял</div>
+        </li>
+
+
+        <li>
+            <div>გვირაბი</div>
+            <div>тоннель</div>
+        </li>
+
+
+        <li>
+            <div>გუგუნი</div>
+            <div>гул, рокот</div>
+        </li>
+
+
+        <li>
+            <div>გაისმა</div>
+            <div>он был услышан</div>
+        </li>
+
+
+        <li>
+            <div>სახურავი</div>
+            <div>крыша</div>
+        </li>
+
+
+        <li>
+            <div>ღუღუნი</div>
+            <div>воркование</div>
+        </li>
+
+
+        <li>
+            <div>გავიგე</div>
+            <div>я услышал; я понял</div>
+        </li>
+
+
+        <li>
+            <div>ღია</div>
+            <div>открытый</div>
+        </li>
+
+
+        <li>
+            <div>დახურული</div>
+            <div>закрытый</div>
+        </li>
+
+
+        <li>
+            <div>ღელე</div>
+            <div>небольшой поток воды, типа ручья</div>
+        </li>
+
+
+        <li>
+            <div>ამოხსენი</div>
+            <div>реши (например, ребус)</div>
+        </li>
+
     </ol>
     <div id="count"></div>
     <div class="controls">
@@ -226,43 +200,4 @@
     </div>
 </body>
 
-<script>
-    const i = document.querySelectorAll('li')
-    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
-
-    function shuffle() {
-        const ol = document.querySelector('ol');
-        const lis = ol.querySelectorAll('li');
-        const result = [];
-        const indexes = [];
-        for (let i = 0; i < lis.length; i++) {
-            indexes.push(i);
-        }
-        while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length)
-            const indexToPush = indexes[randomIndex]
-            indexes.splice(randomIndex, 1)
-
-            result.push(lis[indexToPush])
-        }
-
-        ol.replaceChildren(...result);
-    }
-    function hideRu() {
-        hide("even")
-        show("odd")
-    }
-    function hideGe() {
-        hide("odd")
-        show("even")
-    }
-    function hide(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
-    }
-    function show(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
-    }
-    function showAll() {
-        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
-    }
-</script>
+<script type="text/javascript" src="./scripts.js"></script>

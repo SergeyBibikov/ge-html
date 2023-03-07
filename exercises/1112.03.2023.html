@@ -4,218 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    body {
-        font-size: max(3vw, 16px);
-    }
-
-    li {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    li:after {
-        content: '';
-        display: inline-block;
-        width: 200%;
-        height: 100%;
-        margin: -1px -100% 1px 0;
-        border-bottom: 1px dotted rgb(86, 82, 82);
-    }
-
-    .controls {
-        display: flex;
-        flex-direction: row;
-    }
-
-    button {
-        margin: 5px;
-    }
-</style>
 
 <body>
     <ol>
-        
-                <li>
-                <div>თვითმფრინავი</div>
-                <div>самолёт</div>
-                </li>
-        
 
-                <li>
-                <div>ახტა</div>
-                <div>он запрыгнул</div>
-                </li>
-        
+        <li>
+            <div>თვითმფრინავი</div>
+            <div>самолёт</div>
+        </li>
 
-                <li>
-                <div>ქეცი</div>
-                <div>лишай</div>
-                </li>
-        
 
-                <li>
-                <div>კეცი</div>
-                <div>глиняная посуда для готовки, типа формы</div>
-                </li>
-        
+        <li>
+            <div>ახტა</div>
+            <div>он запрыгнул</div>
+        </li>
 
-                <li>
-                <div>გავიდა</div>
-                <div>он прошёл (о времени); он попал (например, на фестиваль)</div>
-                </li>
-        
 
-                <li>
-                <div>ცვარი</div>
-                <div>роса</div>
-                </li>
-        
+        <li>
+            <div>ქეცი</div>
+            <div>лишай</div>
+        </li>
 
-                <li>
-                <div>დაფარა</div>
-                <div>он покрыл что-то</div>
-                </li>
-        
 
-                <li>
-                <div>შეუტანა</div>
-                <div>он принёс что-то кому-то</div>
-                </li>
-        
+        <li>
+            <div>კეცი</div>
+            <div>глиняная посуда для готовки, типа формы</div>
+        </li>
 
-                <li>
-                <div>დატბორვა</div>
-                <div>затопление</div>
-                </li>
-        
 
-                <li>
-                <div>ჩამოიტანა</div>
-                <div>он привёз, принёс</div>
-                </li>
-        
+        <li>
+            <div>გავიდა</div>
+            <div>он прошёл (о времени); он попал (например, на фестиваль)</div>
+        </li>
 
-                <li>
-                <div>ლხინი</div>
-                <div>пир</div>
-                </li>
-        
 
-                <li>
-                <div>ბერიკაცი</div>
-                <div>старец</div>
-                </li>
-        
+        <li>
+            <div>ცვარი</div>
+            <div>роса</div>
+        </li>
 
-                <li>
-                <div>გამოჩნდა</div>
-                <div>он появился</div>
-                </li>
-        
 
-                <li>
-                <div>თუთია</div>
-                <div>цинк</div>
-                </li>
-        
+        <li>
+            <div>დაფარა</div>
+            <div>он покрыл что-то</div>
+        </li>
 
-                <li>
-                <div>აბრეშუმი</div>
-                <div>шёлк</div>
-                </li>
-        
 
-                <li>
-                <div>თუთა</div>
-                <div>шелковица</div>
-                </li>
-        
+        <li>
+            <div>შეუტანა</div>
+            <div>он принёс что-то кому-то</div>
+        </li>
 
-                <li>
-                <div>ჩინური</div>
-                <div>китайский</div>
-                </li>
-        
 
-                <li>
-                <div>სურნელოვანი</div>
-                <div>душистый, ароматный</div>
-                </li>
-        
+        <li>
+            <div>დატბორვა</div>
+            <div>затопление</div>
+        </li>
 
-                <li>
-                <div>ამოთხარა</div>
-                <div>он вырыл</div>
-                </li>
-        
 
-                <li>
-                <div>კაკანი</div>
-                <div>кудахтанье</div>
-                </li>
-        
+        <li>
+            <div>ჩამოიტანა</div>
+            <div>он привёз, принёс</div>
+        </li>
 
-                <li>
-                <div>კრუხი</div>
-                <div>наседка</div>
-                </li>
-        
 
-                <li>
-                <div>ესმით</div>
-                <div>они слышат; они понимают</div>
-                </li>
-        
+        <li>
+            <div>ლხინი</div>
+            <div>пир</div>
+        </li>
 
-                <li>
-                <div>ყაყანი</div>
-                <div>галдёж</div>
-                </li>
-        
 
-                <li>
-                <div>მოვაჭრე</div>
-                <div>торговец</div>
-                </li>
-        
+        <li>
+            <div>ბერიკაცი</div>
+            <div>старец</div>
+        </li>
 
-                <li>
-                <div>კივილი</div>
-                <div>вопль, визг, крик</div>
-                </li>
-        
 
-                <li>
-                <div>ბუ</div>
-                <div>сова</div>
-                </li>
-        
+        <li>
+            <div>გამოჩნდა</div>
+            <div>он появился</div>
+        </li>
 
-                <li>
-                <div>ისმის</div>
-                <div>он слышится</div>
-                </li>
-        
 
-                <li>
-                <div>მამალი</div>
-                <div>петух</div>
-                </li>
-        
+        <li>
+            <div>თუთია</div>
+            <div>цинк</div>
+        </li>
 
-                <li>
-                <div>ყივილი</div>
-                <div>кукарекание петуха</div>
-                </li>
-        
 
-                <li>
-                <div>აღვიძებს</div>
-                <div>он будит</div>
-                </li>
-        
+        <li>
+            <div>აბრეშუმი</div>
+            <div>шёлк</div>
+        </li>
+
+
+        <li>
+            <div>თუთა</div>
+            <div>шелковица</div>
+        </li>
+
+
+        <li>
+            <div>ჩინური</div>
+            <div>китайский</div>
+        </li>
+
+
+        <li>
+            <div>სურნელოვანი</div>
+            <div>душистый, ароматный</div>
+        </li>
+
+
+        <li>
+            <div>ამოთხარა</div>
+            <div>он вырыл</div>
+        </li>
+
+
+        <li>
+            <div>კაკანი</div>
+            <div>кудахтанье</div>
+        </li>
+
+
+        <li>
+            <div>კრუხი</div>
+            <div>наседка</div>
+        </li>
+
+
+        <li>
+            <div>ესმით</div>
+            <div>они слышат; они понимают</div>
+        </li>
+
+
+        <li>
+            <div>ყაყანი</div>
+            <div>галдёж</div>
+        </li>
+
+
+        <li>
+            <div>მოვაჭრე</div>
+            <div>торговец</div>
+        </li>
+
+
+        <li>
+            <div>კივილი</div>
+            <div>вопль, визг, крик</div>
+        </li>
+
+
+        <li>
+            <div>ბუ</div>
+            <div>сова</div>
+        </li>
+
+
+        <li>
+            <div>ისმის</div>
+            <div>он слышится</div>
+        </li>
+
+
+        <li>
+            <div>მამალი</div>
+            <div>петух</div>
+        </li>
+
+
+        <li>
+            <div>ყივილი</div>
+            <div>кукарекание петуха</div>
+        </li>
+
+
+        <li>
+            <div>აღვიძებს</div>
+            <div>он будит</div>
+        </li>
+
     </ol>
     <div id="count"></div>
     <div class="controls">
@@ -226,43 +200,4 @@
     </div>
 </body>
 
-<script>
-    const i = document.querySelectorAll('li')
-    document.querySelector('#count').textContent = `Всего слов: ${i.length}`
-
-    function shuffle() {
-        const ol = document.querySelector('ol');
-        const lis = ol.querySelectorAll('li');
-        const result = [];
-        const indexes = [];
-        for (let i = 0; i < lis.length; i++) {
-            indexes.push(i);
-        }
-        while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length)
-            const indexToPush = indexes[randomIndex]
-            indexes.splice(randomIndex, 1)
-
-            result.push(lis[indexToPush])
-        }
-
-        ol.replaceChildren(...result);
-    }
-    function hideRu() {
-        hide("even")
-        show("odd")
-    }
-    function hideGe() {
-        hide("odd")
-        show("even")
-    }
-    function hide(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "hidden")
-    }
-    function show(which) {
-        document.querySelectorAll(`li div:nth-child(${which})`).forEach(i => i.style.visibility = "visible")
-    }
-    function showAll() {
-        document.querySelectorAll(`li div`).forEach(i => i.style.visibility = "visible")
-    }
-</script>
+<script type="text/javascript" src="./scripts.js"></script>
