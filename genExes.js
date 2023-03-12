@@ -4,7 +4,7 @@ function createExercises() {
     const content = fs.readFileSync('./exercises/template.html').toString()
     const words = getWords();
     while (words.length > 0) {
-        const w = words.splice(0, 30);
+        const w = words.splice(0, 50);
         writeToFile(content, w);
     }
 }
