@@ -9,10 +9,12 @@ function generate() {
     let dupMessage = '';
     const duplicates = findAlreadyKnownWords(knownWords, newWords)
     for (const d of duplicates) {
-        dupMessage += `
-        ${d}
-        В словаре: ${knownWords[d]}
-        В новых словах: ${newWords[d]}\n`
+        if (knownWords[d] !== newWords[d]) {
+            dupMessage += `
+            ${d}
+            В словаре: ${knownWords[d]}
+            В новых словах: ${newWords[d]}\n`
+        }
         delete _newWords[d]
     }
     if (duplicates.length > 0) result.push(
